@@ -1,0 +1,57 @@
+﻿<repository
+id="be0255f8-40a8-4bb9-8a65-d721eb3a73d3"
+name="AutomationSQLdmRepository"
+rxversion="8.2">
+	<codegen
+	classname="AutomationSQLdmRepository"
+	namespace="AutomationSQLdm">
+	</codegen>
+	<rootfolder
+	capname="unknown"
+	id="7bd21acd-09e4-4c42-81c5-68b39ccd889b"
+	isrooted="True"
+	name="Root"
+	searchtimeout="0ms"
+	usecache="True">
+		<appfolder
+		addcaps="form,control,nativewindow"
+		capname="form"
+		id="9e58868c-5494-43f0-bef4-1afb3d150112"
+		isrooted="True"
+		name="AddPermissionWizard"
+		refpath="/form[@controlname='AddPermissionWizard']"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			addcaps="listitem,accessible"
+			capname="listitem"
+			id="44e4224c-d691-4676-9767-ca1d9a6f2319"
+			name="JSXW7S8SQL2008"
+			refimgid="7e8e133e-a23c-49ff-a502-b8b3927c6be1"
+			refpath="/form[@controlname='AddPermissionWizard']/container[@controlname='_wizard']/element[@controlname='_serversPage']/container[@controlname='_serversListSelectorControl']/container[@controlname='tableLayoutPanel1']/list[@controlname='listBoxAvailable']/list[@accessiblename='Selected Servers:']/listitem[@accessiblename='JS-XW7S8\SQL2008']"
+			searchtimeout="30000ms">
+				/form[@controlname='AddPermissionWizard']/container[@controlname='_wizard']//list[@controlname='listBoxAvailable']/list[@accessiblename='Selected Servers:']/listitem[@accessiblename='JS-XW7S8\SQL2008']
+			</item>
+			<basepath>
+				/form[@controlname='AddPermissionWizard']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAH4SURBVDhPrdFdSJNhGMbxR1BzhTJzapnsJGgU
+RnQQEXYQhGkEgRIUihSzrKyEMM0ME00ENRY6WjPLmOasObKkHDTKmoSBERUZbNWsVdtys/nRKjr5
+9+F74AvBwLrggufk/l0Hj/gveTDoYD6VzmcB6SnLsDGZbxOdfPW2EnbXMDNawvTjPCaHNnKlOj4y
+MGRQEfY08cVVzsyzQqYeZTN5by2fB9R0VC6KDNxvTZqzmknIrmGiP4VxaxzGsoVyYGxNNM7VMTzP
+iGVkVRyOlQrsusVMDWcT+r1qUxPoS+DTtWh83QJ9qUIOTN/sJWQ2ETDq8Taexro8noEmJaE7GoL9
+yQR6Ffh7ovjYJfBcFuhK4uRA8KIBf3MDnqpy3hwoQq9O5EaDkuCv1XFLDD6z4INJ8K5D4G4XNO5f
+IAfenzqB+3AxzvwdvMjZTPWSFCy1CfivRuGVVscuCV63CZxGQX1RrBxwFe5idFsWTzPXMZKh4aAq
+7a9/P7fS+SxQkZrKEdVSipPS2J24jAJlOlV9b+l08Kftd+GsDequw7Fu2HrcJgekpyxlZhdGO5y5
+DTVWONoF+9qgoOUH67U9kYG9hiectECpCbTnIV/3ndz6ADmVr1iReyEykFc3yJ5zsLM5zPZaH1sq
+XrLp0EM2aG+RntUiB+ZT6fxfIsRPbYnQgbXhGFYAAAAASUVORK5CYII=
+			</icon>
+		</appfolder>
+		<basepath>
+		</basepath>
+	</rootfolder>
+	<variables>
+	</variables>
+</repository>

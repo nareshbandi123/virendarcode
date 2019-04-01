@@ -1,0 +1,24 @@
+﻿<Properties>
+  <ActiveConfiguration value="Debug" />
+  <ActivePlatform value="x86" />
+  <SerializedValue name="ModuleBrowserState">
+    <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <string>{61F99090-53F7-41D0-9F8A-6FC8C2262E52}</string>
+      <string>60513a05-eab7-41e7-8c10-e51c735edc2e</string>
+      <string>4a6de247-0fc0-4c5f-91de-4426bcec9862</string>
+      <string>9facefd0-1cd0-4d6d-80ea-0dac9eb1bdfe</string>
+      <string>0992cfff-cb19-46d2-a7f6-6429750eb9a8</string>
+      <string>6443fe8c-b0d3-4233-b8fe-59f27b14fe8b</string>
+      <string>4b8d007c-04f2-4026-961b-9c6a177904c9</string>
+      <string>09dff9b8-0bcc-4366-84f2-2949a5d4e715</string>
+      <string>0d7aa009-3feb-4533-8422-856f53f78d53</string>
+      <string>28d505b6-6704-4f18-ae40-dfd9c24fdcc7</string>
+      <string>cf6c43fc-2eb0-4d19-bde3-1f8499aa455b</string>
+      <string>d51e70be-b510-4597-b7ba-3ddbae30f06d</string>
+      <string>71a738f9-6698-414a-bdb4-8794c49c46e2</string>
+      <string>e82d87e8-0f5b-4804-9d78-98c435facacc</string>
+    </ArrayOfString>
+  </SerializedValue>
+  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[ApplicationSecurity[TC_T721974[]TC_T721975[]TC_T721977[]TC_T721981[]]Commons[]Configuration[]Grooming Modifications[]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\Commons\DBOperations.cs&#xD;&#xA;Solution AutomationSQLdm" />
+  <StartupProject value="{61F99090-53F7-41D0-9F8A-6FC8C2262E52}" />
+</Properties>

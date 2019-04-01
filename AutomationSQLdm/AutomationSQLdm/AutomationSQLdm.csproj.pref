@@ -1,0 +1,28 @@
+﻿<Properties>
+  <Array name="active">
+    <Element value="Commons\DBOperations.cs" />
+  </Array>
+  <Array name="bookmarks">
+    <Element value="Breakpoint|D:\AutomationSQLdm_3rdTC\AutomationSQLdm_3rdTC\AutomationSQLdm\AutomationSQLdm\ApplicationSecurity\Steps.cs|26|5|True|Break||" />
+  </Array>
+  <Array name="files">
+    <Element value="Commons\DBOperations.cs" />
+    <Element value="ApplicationSecurity\Steps.cs" />
+    <Element value="AutomationSQLdm.rxtst" />
+    <Element value="ApplicationSecurity\TC_T721981\VerifySnoozeAlertsForUserWithViewDataAcknowledgeAlarms.cs" />
+    <Element value="ApplicationSecurity\TC_T721974\AddingWindowsUserToSecurityRole.cs" />
+    <Element value="Grooming Modifications\TC_721943\VerifyAggregateForecastingData.cs" />
+    <Element value="ApplicationSecurity\T721974Repo.rxrep" />
+    <Element value="ApplicationSecurity\TC_T721977\VerifyViewDataAcknowledgeSqlUser.cs" />
+    <Element value="ApplicationSecurity\TC_T721975\AddingSqlUserToSecurityRole.cs" />
+    <Element value="ApplicationSecurity\TC_T721976\VerifyViewDataAcknowledgeWindowsUser.cs" />
+    <Element value="ApplicationSecurity\T721974Repo.cs" />
+    <Element value="Commons\Constants.cs" />
+  </Array>
+  <Properties name="projectSavedData">
+    <Properties name="customTool">
+      <runOnBuild value="False" />
+    </Properties>
+    <Array name="recentusercodeselections" />
+  </Properties>
+</Properties>
