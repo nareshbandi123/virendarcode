@@ -114,40 +114,40 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationSecurity\Steps.cs">
+    <Compile Include="OperatorSecurityRole\Steps.cs">
       <id>e98da608-70bb-4fe3-bbfe-eae697ad5c18</id>
     </Compile>
-    <Compile Include="ApplicationSecurity\T721974Repo.cs">
+    <Compile Include="OperatorSecurityRole\T721974Repo.cs">
       <BoundTo>bc67ee76-49ee-4f99-8a4f-5e5198b1611a</BoundTo>
       <DependentUpon>T721974Repo.rxrep</DependentUpon>
       <RepositoryCode>true</RepositoryCode>
       <id>eaa27b1d-a24a-4f09-aafb-3c4f7e76df41</id>
     </Compile>
-    <Compile Include="ApplicationSecurity\TC_T721974\AddingWindowsUserToSecurityRole.cs">
+    <Compile Include="OperatorSecurityRole\TC_T721974\AddingWindowsUserToSecurityRole.cs">
       <id>20e69c50-6e01-4d17-880e-9c2552091040</id>
     </Compile>
-    <Compile Include="ApplicationSecurity\TC_T721974\Recording1.cs">
+    <Compile Include="OperatorSecurityRole\TC_T721974\Recording1.cs">
       <BoundTo>edf6b837-5e63-46f1-817c-06da42057528</BoundTo>
       <DependentUpon>Recording1.rxrec</DependentUpon>
       <RecorderCode>true</RecorderCode>
       <id>1df0429e-d524-4781-be2b-b6af97439783</id>
     </Compile>
-    <Compile Include="ApplicationSecurity\TC_T721974\Recording1.UserCode.cs">
+    <Compile Include="OperatorSecurityRole\TC_T721974\Recording1.UserCode.cs">
       <BoundTo>edf6b837-5e63-46f1-817c-06da42057528</BoundTo>
       <DependentUpon>Recording1.rxrec</DependentUpon>
       <UserCode>true</UserCode>
       <id>40885241-4784-4c08-979c-0bd4186afeb0</id>
     </Compile>
-    <Compile Include="ApplicationSecurity\TC_T721975\AddingSqlUserToSecurityRole.cs">
+    <Compile Include="OperatorSecurityRole\TC_T721975\AddingSqlUserToSecurityRole.cs">
       <id>a673d9f6-4c30-4590-bcbe-83ecca0f3216</id>
     </Compile>
-    <Compile Include="ApplicationSecurity\TC_T721976\VerifyViewDataAcknowledgeWindowsUser.cs">
+    <Compile Include="OperatorSecurityRole\TC_T721976\VerifyViewDataAcknowledgeWindowsUser.cs">
       <id>742a4546-e3e8-428e-bfc6-b52875a4fcbe</id>
     </Compile>
-    <Compile Include="ApplicationSecurity\TC_T721977\VerifyViewDataAcknowledgeSqlUser.cs">
+    <Compile Include="OperatorSecurityRole\TC_T721977\VerifyViewDataAcknowledgeSqlUser.cs">
       <id>5148af9d-be8d-4439-9d27-ec87bd0ecc48</id>
     </Compile>
-    <Compile Include="ApplicationSecurity\TC_T721981\VerifySnoozeAlertsForUserWithViewDataAcknowledgeAlarms.cs">
+    <Compile Include="OperatorSecurityRole\TC_T721981\VerifySnoozeAlertsForUserWithViewDataAcknowledgeAlarms.cs">
       <id>871b87b3-6606-4b95-b770-c21ee318ceaa</id>
     </Compile>
     <Compile Include="Application\AppRepo.cs">
@@ -251,18 +251,18 @@
     <None Include="app.config">
       <id>69040490-c65c-4ca2-8685-110fa732b471</id>
     </None>
-    <None Include="ApplicationSecurity\T721974Repo.rximg">
+    <None Include="OperatorSecurityRole\T721974Repo.rximg">
       <BoundTo>bc67ee76-49ee-4f99-8a4f-5e5198b1611a</BoundTo>
       <DependentUpon>T721974Repo.rxrep</DependentUpon>
       <imageblob>true</imageblob>
       <id>1630795a-71a0-4458-aa44-5eb37e3c6d77</id>
     </None>
-    <None Include="ApplicationSecurity\T721974Repo.rxrep">
+    <None Include="OperatorSecurityRole\T721974Repo.rxrep">
       <id>bc67ee76-49ee-4f99-8a4f-5e5198b1611a</id>
       <repoid>e032fee8-66ef-49a5-bc55-053f9974bd0f</repoid>
       <reporootid>c0b1886f-194f-4804-ae68-99f28ac1402e</reporootid>
     </None>
-    <None Include="ApplicationSecurity\TC_T721974\Recording1.rxrec">
+    <None Include="OperatorSecurityRole\TC_T721974\Recording1.rxrec">
       <BoundTo>e56409ae-2a07-4a4b-8e19-290c345bd67e</BoundTo>
       <id>edf6b837-5e63-46f1-817c-06da42057528</id>
       <recordtableid>e461a081-13dd-49a1-be04-7dd1624076d3</recordtableid>
@@ -331,19 +331,19 @@
     <Folder Include="Application">
       <id>4a6de247-0fc0-4c5f-91de-4426bcec9862</id>
     </Folder>
-    <Folder Include="ApplicationSecurity\TC_T721981">
+    <Folder Include="OperatorSecurityRole\TC_T721981">
       <id>0d7aa009-3feb-4533-8422-856f53f78d53</id>
     </Folder>
-    <Folder Include="ApplicationSecurity\TC_T721977">
+    <Folder Include="OperatorSecurityRole\TC_T721977">
       <id>09dff9b8-0bcc-4366-84f2-2949a5d4e715</id>
     </Folder>
-    <Folder Include="ApplicationSecurity\TC_T721976">
+    <Folder Include="OperatorSecurityRole\TC_T721976">
       <id>4b8d007c-04f2-4026-961b-9c6a177904c9</id>
     </Folder>
-    <Folder Include="ApplicationSecurity\TC_T721975">
+    <Folder Include="OperatorSecurityRole\TC_T721975">
       <id>6443fe8c-b0d3-4233-b8fe-59f27b14fe8b</id>
     </Folder>
-    <Folder Include="ApplicationSecurity\TC_T721974">
+    <Folder Include="OperatorSecurityRole\TC_T721974">
       <id>0992cfff-cb19-46d2-a7f6-6429750eb9a8</id>
     </Folder>
     <Folder Include="Base">
@@ -376,7 +376,7 @@
     <Folder Include="Grooming Modifications\TC_721943">
       <id>d51e70be-b510-4597-b7ba-3ddbae30f06d</id>
     </Folder>
-    <Folder Include="ApplicationSecurity">
+    <Folder Include="OperatorSecurityRole">
       <id>9facefd0-1cd0-4d6d-80ea-0dac9eb1bdfe</id>
     </Folder>
     <Folder Include="SQLQueries">

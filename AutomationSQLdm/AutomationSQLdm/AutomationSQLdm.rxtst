@@ -70,7 +70,6 @@ rxversion="8.2">
 			name="verify_Analysis_Configuration_Change_to_a_foreign_key_with_a_cascade_delete_for_Monitored_Server_ID">
 			</testcase>
 			<testmodule
-			enabled="False"
 			id="3564292a-c71a-4af3-85ae-3ec6de303d07"
 			name="CloseSQLdm"
 			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
@@ -245,7 +244,6 @@ rxversion="8.2">
 			type="UserCode">
 			</testmodule>
 			<testmodule
-			enabled="False"
 			id="a030de85-5b58-40dc-b412-03e91a5c1b96"
 			name="OpenSQLdm"
 			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
@@ -665,15 +663,6 @@ rxversion="8.2">
 	default="TestRun">
 		<testconfiguration
 		name="TestRun">
-			<testcontainer
-			id="1884f6e6-0cb7-497b-b874-8039095f47a4">
-			</testcontainer>
-			<testcontainer
-			id="5e3b329f-982d-4a6d-9158-0eed5778ea4f">
-			</testcontainer>
-			<testcontainer
-			id="86e36b78-bcd5-4718-9d43-6288d2ea503a">
-			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>
 	<references>
