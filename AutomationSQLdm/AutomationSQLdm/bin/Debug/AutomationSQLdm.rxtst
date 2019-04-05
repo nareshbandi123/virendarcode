@@ -14,6 +14,28 @@ rxversion="8.2">
 			type="UserCode">
 			</testmodule>
 			<testmodule
+			id="0301958e-1a89-45db-8ffb-56278b67d55c"
+			name="CloseSQLdm"
+			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
+			type="UserCode">
+			</testmodule>
+			<teardown
+			id="0645da8e-90f5-40f0-b1cd-cfd1e4612aca"
+			name="teardown">
+			</teardown>
+			<setup
+			id="06b22905-6d48-474b-a718-8421c705a1c5"
+			name="setup">
+			</setup>
+			<smartfoldernode
+			id="0797ec3c-ccaf-4243-9584-dcedb3f76a1c"
+			name="T721992">
+			</smartfoldernode>
+			<setup
+			id="0902a1d4-8a86-4c7b-b1ef-2800a36c74f7"
+			name="setup">
+			</setup>
+			<testmodule
 			id="0a9f9b9a-f771-4876-b108-7405eb207881"
 			name="CloseSQLdm"
 			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
@@ -32,6 +54,10 @@ rxversion="8.2">
 			name="Groom_forecasting_data_older_than_XX_days_option_is_shown">
 			</testcase>
 			<testcase
+			id="1796ca3b-b401-4052-b07b-d1ecc506edd7"
+			name="Verify_user_having_'View_data,_acknowledge_alarms_and_control_maintenance_mode_status'_permission_ab1">
+			</testcase>
+			<testcase
 			id="1884f6e6-0cb7-497b-b874-8039095f47a4"
 			name="Verify_user_having_'View_data,_acknowledge_alarms_and_control_maintenance_mode_status'_permission_ab">
 			</testcase>
@@ -39,10 +65,20 @@ rxversion="8.2">
 			id="18b6fc7c-2a60-4137-a449-c0190ed8ef2a"
 			name="teardown">
 			</teardown>
+			<teardown
+			id="1aadaa97-5169-44c8-b8e8-ad43c193389f"
+			name="teardown">
+			</teardown>
 			<setup
 			id="1ef97c6d-c048-43f3-b131-845ccdae4369"
 			name="setup">
 			</setup>
+			<testmodule
+			id="1f7f25a6-d77b-4709-bb80-a78591f5268c"
+			name="CloseSQLdm"
+			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
+			type="UserCode">
+			</testmodule>
 			<setup
 			id="2359562a-7420-4ad6-b875-caf28f04384d"
 			name="setup">
@@ -62,6 +98,10 @@ rxversion="8.2">
 			name="T721960">
 			</smartfoldernode>
 			<testcase
+			id="28debe71-d230-490d-ae17-f5f2e1b1d391"
+			name="Verify_Sql_user_having_'View_data,_acknowledge_alarms_and_control_maintenance_mode_status'_permissio1">
+			</testcase>
+			<testcase
 			id="28ec00c5-9134-4339-85b9-58e85ef785d9"
 			name="By_default_Metrics_data_to_be_groomed_is_shown_with_90_days">
 			</testcase>
@@ -69,10 +109,20 @@ rxversion="8.2">
 			id="29eba377-238b-4cd3-80c5-d0be65ec6509"
 			name="verify_Analysis_Configuration_Change_to_a_foreign_key_with_a_cascade_delete_for_Monitored_Server_ID">
 			</testcase>
+			<smartfoldernode
+			id="2b35d301-86fe-4d6c-a5c9-9eb46ee3c6ee"
+			name="T721982">
+			</smartfoldernode>
 			<testmodule
 			id="3564292a-c71a-4af3-85ae-3ec6de303d07"
 			name="CloseSQLdm"
 			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
+			type="UserCode">
+			</testmodule>
+			<testmodule
+			id="36272233-6bfc-470c-af94-2c01fbad7d27"
+			name="OpenSQLdm"
+			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
 			type="UserCode">
 			</testmodule>
 			<testmodule
@@ -85,6 +135,17 @@ rxversion="8.2">
 			id="3c120d8b-7db2-40b8-832f-72560bdbc457"
 			name="teardown">
 			</teardown>
+			<testcase
+			id="3e766f26-f359-4433-a785-e46a3d0a2210"
+			name="Verify_Sql_user_having_'View_data,_acknowledge_alarms_and_control_maintenance_mode_status'_permissio">
+			</testcase>
+			<testmodule
+			enabled="False"
+			id="46208dff-a930-4911-b582-e64c8222a0d5"
+			name="CloseSQLdm"
+			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
+			type="UserCode">
+			</testmodule>
 			<teardown
 			id="49617662-f886-4568-a44b-dad3b43ebbdc"
 			name="teardown">
@@ -93,6 +154,10 @@ rxversion="8.2">
 			id="4cdcd33f-9a90-4578-9eee-5342c672ce57"
 			name="setup">
 			</setup>
+			<teardown
+			id="4dfbd10f-c02b-426d-9154-d3dc1f20a3b2"
+			name="teardown">
+			</teardown>
 			<setup
 			id="50cbad38-58b4-4463-9854-dd6effc879c9"
 			name="setup">
@@ -100,6 +165,10 @@ rxversion="8.2">
 			<smartfoldernode
 			id="523f2caa-c532-4320-b504-38426e6f4127"
 			name="T721977">
+			</smartfoldernode>
+			<smartfoldernode
+			id="55b0585d-03df-4ebb-94ac-796912d23c20"
+			name="T722131">
 			</smartfoldernode>
 			<testmodule
 			id="58bbea1f-a0a4-4311-9041-7bf169c9c809"
@@ -111,10 +180,26 @@ rxversion="8.2">
 			id="5a195bbf-cab2-45d3-b427-e03a5b93381b"
 			name="setup">
 			</setup>
+			<setup
+			id="5a4fc049-1fb8-4c1f-a2ca-925378edd2a6"
+			name="setup">
+			</setup>
+			<testmodule
+			id="5a9f6992-e3df-4e58-9e2c-388836fe6968"
+			name="OpenSQLdm"
+			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
+			type="UserCode">
+			</testmodule>
 			<testmodule
 			id="5b381ab8-3cfb-4c25-a432-13e9182bc127"
 			name="OpenSQLdm"
 			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
+			type="UserCode">
+			</testmodule>
+			<testmodule
+			id="5c291ee0-e0d1-4b15-87f1-daeecd907ce9"
+			name="CloseSQLdm"
+			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
 			type="UserCode">
 			</testmodule>
 			<testcase
@@ -169,6 +254,10 @@ rxversion="8.2">
 			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
 			type="UserCode">
 			</testmodule>
+			<testcase
+			id="7ee5f97e-e1b9-495b-8772-0f6ceb433c4e"
+			name="Verify_Sql_user_having_'View_data,_acknowledge_alarms_and_control_maintenance_mode_status'_permissio11">
+			</testcase>
 			<teardown
 			id="833e4662-c02b-49bb-9df0-218a3c043974"
 			name="teardown">
@@ -181,6 +270,10 @@ rxversion="8.2">
 			id="86e99f81-5251-40fe-8808-7c2851924693"
 			name="T721975">
 			</smartfoldernode>
+			<setup
+			id="87c5bcc6-1df3-43e0-85ea-ddb767a2fd5f"
+			name="setup">
+			</setup>
 			<testmodule
 			id="88d6a8d7-c611-4c93-99a8-e1e46856bff1"
 			name="OpenSQLdm"
@@ -195,6 +288,14 @@ rxversion="8.2">
 			id="8a3843e6-6408-413a-bad3-2b8a6640692d"
 			name="setup">
 			</setup>
+			<smartfoldernode
+			id="8aaa0240-6881-4d75-9e79-b91d640dfc53"
+			name="T721993">
+			</smartfoldernode>
+			<teardown
+			id="8bca483d-e578-4de3-84b9-e7e2ede15420"
+			name="teardown">
+			</teardown>
 			<testcase
 			id="8dc33922-6530-45bc-bff8-7ebb34dace7f"
 			name="Adding_SQLUser_to_security_role_by_selecting_“View_data,_acknowledge_alarms,_and_control_maintenanc">
@@ -207,6 +308,12 @@ rxversion="8.2">
 			id="8f0cd862-fb36-481b-90e4-ecaaf6414710"
 			name="VerifyAggregateForecastingData"
 			ref="67cf26e9-3f8f-44ee-876b-1606a1900202"
+			type="UserCode">
+			</testmodule>
+			<testmodule
+			id="8f91678e-3342-4b30-93e7-4f25d26e295b"
+			name="OpenSQLdm"
+			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
 			type="UserCode">
 			</testmodule>
 			<testmodule
@@ -249,6 +356,19 @@ rxversion="8.2">
 			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
 			type="UserCode">
 			</testmodule>
+			<testmodule
+			id="a241ac74-aea5-44e4-9090-b631af9f7627"
+			name="VerifySQLdmUserCanEnableWMIcollectionOption"
+			ref="f7a1c105-66ca-4582-a174-11b938ae4e0a"
+			type="UserCode">
+			</testmodule>
+			<testmodule
+			enabled="False"
+			id="a4d3a3c8-9bd6-4b00-b5e9-450db0fd71da"
+			name="OpenSQLdm"
+			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
+			type="UserCode">
+			</testmodule>
 			<testcase
 			id="a6475606-3aef-4438-b10f-0d6803787c50"
 			name="Availability_of_“View_data,_acknowledge_alarms,_and_control_maintenance_mode_status”_option_on_SQLUs">
@@ -269,6 +389,12 @@ rxversion="8.2">
 			id="ac41ddef-f5c3-4d8d-9ea5-5448bd904227"
 			name="teardown">
 			</teardown>
+			<testmodule
+			id="b4c7a4ad-7775-416b-a5cb-b7c018dcba7f"
+			name="VerifyMaintenanceModeForSqlUser"
+			ref="c3784972-9a59-4d5e-b1bf-466c49f854ca"
+			type="UserCode">
+			</testmodule>
 			<testmodule
 			id="b51653e6-11f4-4a3f-b527-d49501611c96"
 			name="CloseSQLdm"
@@ -340,6 +466,12 @@ rxversion="8.2">
 			type="UserCode">
 			</testmodule>
 			<testmodule
+			id="d26f14da-857e-4d0a-92a8-81311058ef83"
+			name="VerifySnoozeAlertsForFewMinutesForSqlUser"
+			ref="c0223962-f997-4c6f-b6c0-24cb8014dabb"
+			type="UserCode">
+			</testmodule>
+			<testmodule
 			id="d42db6fb-fca3-4464-a573-0c37e1c5feba"
 			name="VerifyValuesInRepositoryTable"
 			ref="36cea6ad-ddaa-417b-8ea6-df77a606559f"
@@ -357,7 +489,7 @@ rxversion="8.2">
 			</smartfoldernode>
 			<testmodule
 			id="ec56eb32-27dd-4b93-9c61-2d2e8157cece"
-			name="VerifySnoozeAlertsForUserWithViewDataAcknowledgeAlarms"
+			name="VerifySnoozeAlertsForFewMinutesForWindowsUser"
 			ref="f30dd081-d3d3-4cad-a667-ce95c221e53a"
 			type="UserCode">
 			</testmodule>
@@ -365,6 +497,12 @@ rxversion="8.2">
 			id="f1b7cbde-458e-493c-9f14-dd977cba4384"
 			name="teardown">
 			</teardown>
+			<testmodule
+			id="f2325006-d409-4574-8f8a-da636c63760a"
+			name="VerifySnoozeAlertsFor10MinutesForWindowsUser"
+			ref="4bb73b19-a411-466e-8b32-b36229059e3c"
+			type="UserCode">
+			</testmodule>
 		</flatlistofchildren>
 		<childhierarchy>
 			<testsuite
@@ -641,7 +779,7 @@ rxversion="8.2">
 						name="Verify_user_having_'View_data,_acknowledge_alarms_and_control_maintenance_mode_status'_permission_ab">
 							<testmodule
 							id="ec56eb32-27dd-4b93-9c61-2d2e8157cece"
-							name="VerifySnoozeAlertsForUserWithViewDataAcknowledgeAlarms">
+							name="VerifySnoozeAlertsForFewMinutesForWindowsUser">
 							</testmodule>
 						</testcase>
 						<teardown
@@ -649,6 +787,118 @@ rxversion="8.2">
 						name="teardown">
 							<testmodule
 							id="3564292a-c71a-4af3-85ae-3ec6de303d07"
+							name="CloseSQLdm">
+							</testmodule>
+						</teardown>
+					</smartfoldernode>
+					<smartfoldernode
+					id="2b35d301-86fe-4d6c-a5c9-9eb46ee3c6ee"
+					name="T721982">
+						<setup
+						id="0902a1d4-8a86-4c7b-b1ef-2800a36c74f7"
+						name="setup">
+							<testmodule
+							id="5a9f6992-e3df-4e58-9e2c-388836fe6968"
+							name="OpenSQLdm">
+							</testmodule>
+						</setup>
+						<testcase
+						id="1796ca3b-b401-4052-b07b-d1ecc506edd7"
+						name="Verify_user_having_'View_data,_acknowledge_alarms_and_control_maintenance_mode_status'_permission_ab1">
+							<testmodule
+							id="f2325006-d409-4574-8f8a-da636c63760a"
+							name="VerifySnoozeAlertsFor10MinutesForWindowsUser">
+							</testmodule>
+						</testcase>
+						<teardown
+						id="0645da8e-90f5-40f0-b1cd-cfd1e4612aca"
+						name="teardown">
+							<testmodule
+							id="1f7f25a6-d77b-4709-bb80-a78591f5268c"
+							name="CloseSQLdm">
+							</testmodule>
+						</teardown>
+					</smartfoldernode>
+					<smartfoldernode
+					id="0797ec3c-ccaf-4243-9584-dcedb3f76a1c"
+					name="T721992">
+						<setup
+						id="87c5bcc6-1df3-43e0-85ea-ddb767a2fd5f"
+						name="setup">
+							<testmodule
+							id="36272233-6bfc-470c-af94-2c01fbad7d27"
+							name="OpenSQLdm">
+							</testmodule>
+						</setup>
+						<testcase
+						id="3e766f26-f359-4433-a785-e46a3d0a2210"
+						name="Verify_Sql_user_having_'View_data,_acknowledge_alarms_and_control_maintenance_mode_status'_permissio">
+							<testmodule
+							id="d26f14da-857e-4d0a-92a8-81311058ef83"
+							name="VerifySnoozeAlertsForFewMinutesForSqlUser">
+							</testmodule>
+						</testcase>
+						<teardown
+						id="8bca483d-e578-4de3-84b9-e7e2ede15420"
+						name="teardown">
+							<testmodule
+							id="5c291ee0-e0d1-4b15-87f1-daeecd907ce9"
+							name="CloseSQLdm">
+							</testmodule>
+						</teardown>
+					</smartfoldernode>
+					<smartfoldernode
+					id="55b0585d-03df-4ebb-94ac-796912d23c20"
+					name="T722131">
+						<setup
+						id="5a4fc049-1fb8-4c1f-a2ca-925378edd2a6"
+						name="setup">
+							<testmodule
+							id="a4d3a3c8-9bd6-4b00-b5e9-450db0fd71da"
+							name="OpenSQLdm">
+							</testmodule>
+						</setup>
+						<testcase
+						id="28debe71-d230-490d-ae17-f5f2e1b1d391"
+						name="Verify_Sql_user_having_'View_data,_acknowledge_alarms_and_control_maintenance_mode_status'_permissio1">
+							<testmodule
+							id="a241ac74-aea5-44e4-9090-b631af9f7627"
+							name="VerifySQLdmUserCanEnableWMIcollectionOption">
+							</testmodule>
+						</testcase>
+						<teardown
+						id="1aadaa97-5169-44c8-b8e8-ad43c193389f"
+						name="teardown">
+							<testmodule
+							id="46208dff-a930-4911-b582-e64c8222a0d5"
+							name="CloseSQLdm">
+							</testmodule>
+						</teardown>
+					</smartfoldernode>
+					<smartfoldernode
+					id="8aaa0240-6881-4d75-9e79-b91d640dfc53"
+					name="T721993">
+						<setup
+						id="06b22905-6d48-474b-a718-8421c705a1c5"
+						name="setup">
+							<testmodule
+							id="8f91678e-3342-4b30-93e7-4f25d26e295b"
+							name="OpenSQLdm">
+							</testmodule>
+						</setup>
+						<testcase
+						id="7ee5f97e-e1b9-495b-8772-0f6ceb433c4e"
+						name="Verify_Sql_user_having_'View_data,_acknowledge_alarms_and_control_maintenance_mode_status'_permissio11">
+							<testmodule
+							id="b4c7a4ad-7775-416b-a5cb-b7c018dcba7f"
+							name="VerifyMaintenanceModeForSqlUser">
+							</testmodule>
+						</testcase>
+						<teardown
+						id="4dfbd10f-c02b-426d-9154-d3dc1f20a3b2"
+						name="teardown">
+							<testmodule
+							id="0301958e-1a89-45db-8ffb-56278b67d55c"
 							name="CloseSQLdm">
 							</testmodule>
 						</teardown>
@@ -664,13 +914,13 @@ rxversion="8.2">
 		<testconfiguration
 		name="TestRun">
 			<testcontainer
+			id="28debe71-d230-490d-ae17-f5f2e1b1d391">
+			</testcontainer>
+			<testcontainer
+			id="55b0585d-03df-4ebb-94ac-796912d23c20">
+			</testcontainer>
+			<testcontainer
 			id="5e3b329f-982d-4a6d-9158-0eed5778ea4f">
-			</testcontainer>
-			<testcontainer
-			id="894b0166-b74f-448d-85b0-3a6d29580fef">
-			</testcontainer>
-			<testcontainer
-			id="c317497f-24a4-4221-b77f-c9727bb58fcc">
 			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>

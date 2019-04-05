@@ -1,0 +1,382 @@
+﻿<repository
+id="064bcc79-86ef-4c95-be62-9cfc3a562002"
+name="BVTRepo"
+rxversion="8.2">
+	<codegen
+	classname="BVTRepo"
+	namespace="AutomationSQLdm.BVT">
+	</codegen>
+	<rootfolder
+	capname="unknown"
+	id="89e1bd47-219c-49ba-b76b-07e3f5b33a94"
+	isrooted="True"
+	name="Root"
+	searchtimeout="0ms"
+	usecache="True">
+		<appfolder
+		capname="form"
+		id="1a73f651-c755-42fc-8b6e-622d9bbcf5f6"
+		isrooted="True"
+		name="Application"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			addcaps="unknown,control,nativewindow"
+			capname="unknown"
+			id="f50023fb-90bd-41a4-89e6-e5ec4644f21e"
+			name="ElementBr"
+			refimgid="9cf2929e-1ae8-4c4a-8010-cfc0de822ec7"
+			refpath="/form[@title='Idera SQL diagnostic manager - SQLdmRepository (CIGNITI-W12R2-1\SQL2016)']/statusbar[@automationid='statusBar']/container[2]/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/container[@caption='']/container[@controlname='_child']/container[@controlname='ServerSummaryView4']/container[@controlname='serverOverviewContentPanel']/container[@controlname='dashboardTableLayoutPanel']/container[@controlname='CpuControl']/container[@controlname='mainTableLayoutPanel']/container[@controlname='cpuUsagePanel']/element[@controlname='cpuUsageChart']/element[@controlname='br']"
+			searchtimeout="30000ms">
+				<image
+				guid="a50c8111-5f42-4088-9abd-c5e3291d1562"
+				name="CPU">
+					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
+AAAASUVORK5CYII=
+				</image>
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//container[@controlname='dashboardTableLayoutPanel']/container[@controlname='CpuControl']//element[@controlname='br']
+			</item>
+			<basepath>
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']
+			</basepath>
+		</appfolder>
+		<appfolder
+		addcaps="contextmenu,control,nativewindow"
+		capname="contextmenu"
+		id="e140d4dc-2ddc-406e-830c-583124931599"
+		isrooted="True"
+		name="SQLdmDesktopClient"
+		refpath="/contextmenu[@processname='SQLdmDesktopClient']"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			addcaps="menuitem,accessible"
+			capname="menuitem"
+			id="7ce3a534-ef11-4faf-8c9d-a4677b844a08"
+			name="Properties"
+			refimgid="b16a2a3c-237b-4fa0-a454-3ace5c581f27"
+			refpath="/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@accessiblename='Properties...']"
+			searchtimeout="30000ms">
+				/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@accessiblename='Properties...']
+			</item>
+			<basepath>
+				/contextmenu[@processname='SQLdmDesktopClient']
+			</basepath>
+			<icon>
+				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
+			</icon>
+		</appfolder>
+		<appfolder
+		addcaps="form,control,nativewindow"
+		capname="form"
+		id="cdc48991-0ebd-482b-9b79-ed5a0ff93a99"
+		isrooted="True"
+		name="MonitoredSqlServerInstancePropertiesDial"
+		refpath="/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			addcaps="listitem,accessible"
+			capname="listitem"
+			id="e0720cb8-acdc-4c56-b62e-12b4b2365c19"
+			name="OSMetrix"
+			refimgid="8cfb33fe-e96a-4c4c-aea4-ec56a6ea5ec2"
+			searchtimeout="30000ms">
+				/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//list[@controlname='propertyPageListBox']//listitem[@index='8']
+			</item>
+			<folder
+			addcaps="container,control,nativewindow"
+			capname="container"
+			id="133ae619-d314-4cda-8854-f8168b347457"
+			isrooted="True"
+			name="OsPropertyPage"
+			refpath="/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']/container[@controlname='splitContainer']/container[@controlname='panel2']/container[@controlname='osPropertyPage']"
+			searchtimeout="30000ms"
+			usecache="False">
+				<item
+				addcaps="checkbox,control,nativewindow"
+				capname="checkbox"
+				id="10cb1136-2861-42e8-a2f8-3c6fa73eaafd"
+				name="SqldmServiceAccount"
+				refimgid="7c504ca9-fd51-404d-a985-fd9e4485370a"
+				searchtimeout="30000ms">
+					/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='osPropertyPage']//container[@controlname='wmiCredentialsSecondaryContainer']//checkbox[@controlname='optionWmiCSCreds']
+				</item>
+				<item
+				addcaps="text,accessible"
+				capname="text"
+				id="48b8b1e2-c2e9-4f09-a983-b03d1bc44a29"
+				name="UserName"
+				refimgid="8bed66ae-6a2c-4fc5-890a-ab562a5f2bfc"
+				searchtimeout="30000ms">
+					/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='osPropertyPage']//container[@controlname='wmiCredentialsSecondaryContainer']//text[@controlname='directWmiUserName']/text[@accessiblerole='Text']
+				</item>
+				<item
+				addcaps="radiobutton,control,nativewindow"
+				capname="radiobutton"
+				id="cf61cbff-d218-4cc7-9ffe-b70c7ba05912"
+				name="OptionWmiDirect"
+				refimgid="ce424461-8100-42ed-bb8d-333d202edf06"
+				searchtimeout="30000ms">
+					/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='osPropertyPage']//radiobutton[@controlname='optionWmiDirect']
+				</item>
+				<item
+				addcaps="text,accessible"
+				capname="text"
+				id="f3d8a65a-76d1-427d-be97-02e89d2a6453"
+				name="Password"
+				refimgid="713cb9fb-6328-40cb-a893-b1c4e014d24d"
+				searchtimeout="30000ms">
+					/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='osPropertyPage']//container[@controlname='wmiCredentialsSecondaryContainer']//text[@controlname='directWmiPassword']/text[@accessiblerole='Text']
+				</item>
+				<item
+				addcaps="button,control,nativewindow"
+				capname="button"
+				id="b69e423f-19ea-4d62-ada1-891b31aeb7bb"
+				name="WmiTestButton"
+				refimgid="320e6e80-a9de-40a3-b647-86a780c2c082"
+				searchtimeout="30000ms">
+					/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='osPropertyPage']//container[@controlname='wmiCredentialsSecondaryContainer']///button[@controlname='wmiTestButton']
+				</item>
+				<basepath>
+					/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='osPropertyPage']
+				</basepath>
+			</folder>
+			<basepath>
+				/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAH4SURBVDhPrdFdSJNhGMbxR1BzhTJzapnsJGgU
+RnQQEXYQhGkEgRIUihSzrKyEMM0ME00ENRY6WjPLmOasObKkHDTKmoSBERUZbNWsVdtys/nRKjr5
+9+F74AvBwLrggufk/l0Hj/gveTDoYD6VzmcB6SnLsDGZbxOdfPW2EnbXMDNawvTjPCaHNnKlOj4y
+MGRQEfY08cVVzsyzQqYeZTN5by2fB9R0VC6KDNxvTZqzmknIrmGiP4VxaxzGsoVyYGxNNM7VMTzP
+iGVkVRyOlQrsusVMDWcT+r1qUxPoS+DTtWh83QJ9qUIOTN/sJWQ2ETDq8Taexro8noEmJaE7GoL9
+yQR6Ffh7ovjYJfBcFuhK4uRA8KIBf3MDnqpy3hwoQq9O5EaDkuCv1XFLDD6z4INJ8K5D4G4XNO5f
+IAfenzqB+3AxzvwdvMjZTPWSFCy1CfivRuGVVscuCV63CZxGQX1RrBxwFe5idFsWTzPXMZKh4aAq
+7a9/P7fS+SxQkZrKEdVSipPS2J24jAJlOlV9b+l08Kftd+GsDequw7Fu2HrcJgekpyxlZhdGO5y5
+DTVWONoF+9qgoOUH67U9kYG9hiectECpCbTnIV/3ndz6ADmVr1iReyEykFc3yJ5zsLM5zPZaH1sq
+XrLp0EM2aG+RntUiB+ZT6fxfIsRPbYnQgbXhGFYAAAAASUVORK5CYII=
+			</icon>
+		</appfolder>
+		<appfolder
+		capname="statusbar"
+		id="7b4e5881-77f5-4a98-8a78-e1b6f4c30e48"
+		isrooted="True"
+		name="CPU"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			capname="unknown"
+			id="b345f5bc-9c04-43ca-8ab5-52e55a6a1000"
+			name="Chart"
+			searchtimeout="30000ms">
+				<image
+				guid="48ebf283-477f-4e65-a4c3-085d5ee781f6"
+				name="Screenshot1">
+					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
+				</image>
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//container[@controlname='dashboardTableLayoutPanel']/container[@controlname='CpuControl']//element[@controlname='br']
+			</item>
+			<basepath>
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']
+			</basepath>
+		</appfolder>
+		<appfolder
+		addcaps="form,control,nativewindow"
+		capname="form"
+		id="5dc6a578-8823-4687-9328-acb0b68d03c0"
+		isrooted="True"
+		name="ExceptionMessageBoxForm"
+		refpath="/form[@controlname='ExceptionMessageBoxForm']"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			addcaps="button,control,nativewindow"
+			capname="button"
+			id="65600686-fcf9-4595-9568-6fb9f3bf3ba0"
+			name="ButtonYes"
+			refimgid="b04027e1-c84d-4d7f-81e9-36173245795f"
+			searchtimeout="30000ms">
+				/form[@controlname='ExceptionMessageBoxForm']/container[@controlname='pnlForm']//button[@controlname='button1']
+			</item>
+			<basepath>
+				/form[@controlname='ExceptionMessageBoxForm']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAH4SURBVDhPrdFdSJNhGMbxR1BzhTJzapnsJGgU
+RnQQEXYQhGkEgRIUihSzrKyEMM0ME00ENRY6WjPLmOasObKkHDTKmoSBERUZbNWsVdtys/nRKjr5
+9+F74AvBwLrggufk/l0Hj/gveTDoYD6VzmcB6SnLsDGZbxOdfPW2EnbXMDNawvTjPCaHNnKlOj4y
+MGRQEfY08cVVzsyzQqYeZTN5by2fB9R0VC6KDNxvTZqzmknIrmGiP4VxaxzGsoVyYGxNNM7VMTzP
+iGVkVRyOlQrsusVMDWcT+r1qUxPoS+DTtWh83QJ9qUIOTN/sJWQ2ETDq8Taexro8noEmJaE7GoL9
+yQR6Ffh7ovjYJfBcFuhK4uRA8KIBf3MDnqpy3hwoQq9O5EaDkuCv1XFLDD6z4INJ8K5D4G4XNO5f
+IAfenzqB+3AxzvwdvMjZTPWSFCy1CfivRuGVVscuCV63CZxGQX1RrBxwFe5idFsWTzPXMZKh4aAq
+7a9/P7fS+SxQkZrKEdVSipPS2J24jAJlOlV9b+l08Kftd+GsDequw7Fu2HrcJgekpyxlZhdGO5y5
+DTVWONoF+9qgoOUH67U9kYG9hiectECpCbTnIV/3ndz6ADmVr1iReyEykFc3yJ5zsLM5zPZaH1sq
+XrLp0EM2aG+RntUiB+ZT6fxfIsRPbYnQgbXhGFYAAAAASUVORK5CYII=
+			</icon>
+		</appfolder>
+		<basepath>
+		</basepath>
+	</rootfolder>
+	<variables>
+	</variables>
+</repository>

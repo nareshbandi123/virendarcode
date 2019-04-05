@@ -49,6 +49,96 @@ DTVWONoF+9qgoOUH67U9kYG9hiectECpCbTnIV/3ndz6ADmVr1iReyEykFc3yJ5zsLM5zPZaH1sq
 XrLp0EM2aG+RntUiB+ZT6fxfIsRPbYnQgbXhGFYAAAAASUVORK5CYII=
 			</icon>
 		</appfolder>
+		<appfolder
+		addcaps="form,nativewindow,wpfwin32element,wpfelement,wpfgroupelement"
+		capname="form"
+		id="fead8a00-8d89-42b9-8104-d120c8958f37"
+		isrooted="True"
+		name="IderaSQLDiagnosticManagerSQLdmRepo"
+		refpath="/form[@title='Idera SQL diagnostic manager - SQLdmRepository (CIGNITI-W12R2-1\SQL2016)']"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			addcaps="unknown,control,nativewindow"
+			capname="unknown"
+			id="f50023fb-90bd-41a4-89e6-e5ec4644f21e"
+			name="ElementBr"
+			refimgid="272b8bf3-7c41-4c79-a25a-8e8332cbc2cf"
+			refpath="/form[@title='Idera SQL diagnostic manager - SQLdmRepository (CIGNITI-W12R2-1\SQL2016)']/statusbar[@automationid='statusBar']/container[2]/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/container[@caption='']/container[@controlname='_child']/container[@controlname='ServerSummaryView4']/container[@controlname='serverOverviewContentPanel']/container[@controlname='dashboardTableLayoutPanel']/container[@controlname='CpuControl']/container[@controlname='mainTableLayoutPanel']/container[@controlname='cpuUsagePanel']/element[@controlname='cpuUsageChart']/element[@controlname='br']"
+			searchtimeout="30000ms">
+				<image
+				guid="a50c8111-5f42-4088-9abd-c5e3291d1562"
+				name="CPU">
+					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
+AAAASUVORK5CYII=
+				</image>
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//container[@controlname='dashboardTableLayoutPanel']/container[@controlname='CpuControl']//element[@controlname='br']
+			</item>
+			<basepath>
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAANTSURBVDhPZZN7SFNhGMZPlolJdgGxRLOboCnt
+pFmroEVSlmFJUWGEYitQSyotrW2Vl6aV1zA7NWdBaepi2WSWl8q2ppvkcmVejunI5syJaWpm54/x
+NKdd0B98/3y8z4+Pl+cjpqM66E4asyOpb/ICekgpYwYVMsYky6e7hFyqNsiFnBqbSSnb1f7r9TDR
+zxa1menVgzHq8aunC+MGy/nSiZ/dnRjS1Znbr0aIJmanYpNkWi4GRGcVTLsGv9o0sEgw1lyPH+9V
+GGl6g2GtEkONCoz26zFsoNF6KVxRyib+SUzJwSKm4SnG1WUYU0kxqnyM4dpSDNYUY6CyCKaKhzDW
+P0XvQCMM8kJ0l4qhDWOLrGHVPidyXHbdPF6Zh2+VuRiV5WBImoWBknSYCq/BeF+IzwUp0HYW4H31
+TbRn8dCSfgG6pBhz1Q7LTvpPeVLDeQfxTM2FXBuNwYI49FQVwZgvgCEjCvrUE3glOY4nTZFoungU
+784chjrqAD5oNKjjcynis4BFCyvmI+mFA1LqnXFfFoOS5h5INc3QJXPxNj4A6Y1rIeX7QrXXG9Vb
+3SC+nY971RrItiyjiUvFc5i0ckd8Td6EwoxA7JfU4c618xBm5yH0wWvE3/GDoMgWSo4TatiLcCYh
+BUfFVXiwYTnKVhEMcTfLiRlJ5aBVsBseaVJsvxWD5Mfz0MH1ATc+Fksy5eBFbLcK9oWfxpIrEuT6
+rYB01exJwQhvPd2fshNeAjG2JWTgY8I6xClt8FDojMtSOwQKQ2BzpRy+0amw50uQs9kL5V52VoFs
+NUEThmhPKoCXBU++GN0XOOiP88eTNDfEaQnEKmeh9pArzoUEwT7hEa5ySFSwHP4KKtcQFHGD4066
+xd41t/B34ztvs1Wgj2ThcrE9qMTFUAe7o5zjjHsbl0KyzhHyKUGZx2yznEVMVlvH9RGNJW61Cvpi
+/dEY7g3JEUvQElbtWYaGQBfrDl5sXIjnU4KatbMmizRBpqWWphhvxZ8XGKJJdB7zRkuoB3Qhy9Gw
+ywVv/ghIB1SzbBWZrv9VeYIJSXfEClHfaT9zz0kSXRZB2zTBS/YCs2LDXNGM8P9U7ZhHfgp1pTqO
+rKRbD7kzTcEuzNudTrR623xK7m877TsTxG+W+SGNGP784AAAAABJRU5ErkJggg==
+			</icon>
+		</appfolder>
 		<basepath>
 		</basepath>
 	</rootfolder>

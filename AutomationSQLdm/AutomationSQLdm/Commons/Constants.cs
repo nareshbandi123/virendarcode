@@ -15,6 +15,8 @@ namespace AutomationSQLdm.Commons
 		//{"GroomForecasting", "AggregateForecasting", "GroomPrescriptiveAnalysis","GroomQueryAggregation","GroomAlerts","GroomMetrics"};
 
 #region SQLDM Constants
+				
+		
 		public const string NewWindowsUser = @"SIMPSONS\administrator1";
 		public const string NewSqlUser = @"sa1";
 #endregion

@@ -28,6 +28,7 @@ namespace AutomationSQLdm
     {
         static AutomationSQLdmRepository instance = new AutomationSQLdmRepository();
         AutomationSQLdmRepositoryFolders.AddPermissionWizardAppFolder _addpermissionwizard;
+        AutomationSQLdmRepositoryFolders.IderaSQLDiagnosticManagerSQLdmRepoAppFolder _iderasqldiagnosticmanagersqldmrepo;
 
         /// <summary>
         /// Gets the singleton class instance representing the AutomationSQLdmRepository element repository.
@@ -45,6 +46,7 @@ namespace AutomationSQLdm
             : base("AutomationSQLdmRepository", "/", null, 0, false, "7bd21acd-09e4-4c42-81c5-68b39ccd889b", ".\\RepositoryImages\\AutomationSQLdmRepository7bd21acd.rximgres")
         {
             _addpermissionwizard = new AutomationSQLdmRepositoryFolders.AddPermissionWizardAppFolder(this);
+            _iderasqldiagnosticmanagersqldmrepo = new AutomationSQLdmRepositoryFolders.IderaSQLDiagnosticManagerSQLdmRepoAppFolder(this);
         }
 
 #region Variables
@@ -70,6 +72,15 @@ namespace AutomationSQLdm
         public virtual AutomationSQLdmRepositoryFolders.AddPermissionWizardAppFolder AddPermissionWizard
         {
             get { return _addpermissionwizard; }
+        }
+
+        /// <summary>
+        /// The IderaSQLDiagnosticManagerSQLdmRepo folder.
+        /// </summary>
+        [RepositoryFolder("fead8a00-8d89-42b9-8104-d120c8958f37")]
+        public virtual AutomationSQLdmRepositoryFolders.IderaSQLDiagnosticManagerSQLdmRepoAppFolder IderaSQLDiagnosticManagerSQLdmRepo
+        {
+            get { return _iderasqldiagnosticmanagersqldmrepo; }
         }
     }
 
@@ -141,6 +152,107 @@ namespace AutomationSQLdm
                 get
                 {
                     return _jsxw7s8sql2008Info;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The IderaSQLDiagnosticManagerSQLdmRepoAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("fead8a00-8d89-42b9-8104-d120c8958f37")]
+        public partial class IderaSQLDiagnosticManagerSQLdmRepoAppFolder : RepoGenBaseFolder
+        {
+            ElementBrInfoClass _elementbrInfo;
+
+            /// <summary>
+            /// Creates a new IderaSQLDiagnosticManagerSQLdmRepo  folder.
+            /// </summary>
+            public IderaSQLDiagnosticManagerSQLdmRepoAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("IderaSQLDiagnosticManagerSQLdmRepo", "/form[@title~'^Idera\\ SQL\\ diagnostic\\ mana']", parentFolder, 30000, null, true, "fead8a00-8d89-42b9-8104-d120c8958f37", "")
+            {
+                _elementbrInfo = new ElementBrInfoClass(this);
+            }
+
+            /// <summary>
+            /// The ElementBrInfoClass folder.
+            /// </summary>
+            [RepositoryItemInfo("f50023fb-90bd-41a4-89e6-e5ec4644f21e")]
+            public class ElementBrInfoClass : RepoItemInfo
+            {
+                /// <summary>
+                /// ElementBrInfoClass class constructor.
+                /// </summary>
+                public ElementBrInfoClass(RepoGenBaseFolder parentFolder)
+                    : base(parentFolder, "ElementBr", "statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//container[@controlname='dashboardTableLayoutPanel']/container[@controlname='CpuControl']//element[@controlname='br']", 30000, null, "f50023fb-90bd-41a4-89e6-e5ec4644f21e")
+                { }
+
+                /// <summary>
+                /// Gets the CPU item image.
+                /// </summary>
+                /// <returns>The CPU image.</returns>
+                [RepositoryImage("a50c8111-5f42-4088-9abd-c5e3291d1562")]
+                public CompressedImage GetCPU()
+                {
+                    return GetImage("a50c8111-5f42-4088-9abd-c5e3291d1562");
+                }
+
+                /// <summary>
+                /// Gets the CPU item image.
+                /// </summary>
+                /// <param name="cropRect">The bounds of the sub-image to return.</param>
+                /// <returns>The cropped image.</returns>
+                [RepositoryImage("a50c8111-5f42-4088-9abd-c5e3291d1562")]
+                public CompressedImage GetCPU(System.Drawing.Rectangle cropRect)
+                {
+                    return GetImage("a50c8111-5f42-4088-9abd-c5e3291d1562", cropRect);
+                }
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("fead8a00-8d89-42b9-8104-d120c8958f37")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("fead8a00-8d89-42b9-8104-d120c8958f37")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ElementBr item.
+            /// </summary>
+            [RepositoryItem("f50023fb-90bd-41a4-89e6-e5ec4644f21e")]
+            public virtual Ranorex.Unknown ElementBr
+            {
+                get
+                {
+                    return _elementbrInfo.CreateAdapter<Ranorex.Unknown>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ElementBr item info.
+            /// </summary>
+            [RepositoryItemInfo("f50023fb-90bd-41a4-89e6-e5ec4644f21e")]
+            public virtual ElementBrInfoClass ElementBrInfo
+            {
+                get
+                {
+                    return _elementbrInfo;
                 }
             }
         }

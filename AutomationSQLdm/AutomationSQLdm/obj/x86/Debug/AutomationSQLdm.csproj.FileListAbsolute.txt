@@ -34,3 +34,5 @@ D:\repos\virendarcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\Ranorex.Core.Res
 D:\repos\virendarcode\AutomationSQLdm\AutomationSQLdm\obj\x86\Debug\AutomationSQLdm.csprojResolveAssemblyReference.cache
 D:\repos\virendarcode\AutomationSQLdm\AutomationSQLdm\obj\x86\Debug\AutomationSQLdm.exe
 D:\repos\virendarcode\AutomationSQLdm\AutomationSQLdm\obj\x86\Debug\AutomationSQLdm.pdb
+D:\repos\virendarcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\RepositoryImages\BVTRepo89e1bd47.rximgres
+D:\repos\virendarcode\AutomationSQLdm\AutomationSQLdm\bin\Debug\RepositoryImages\AutomationSQLdmRepository7bd21acd.rximgres

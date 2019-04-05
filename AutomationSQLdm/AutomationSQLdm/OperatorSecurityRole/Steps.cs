@@ -15,8 +15,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 	/// </summary>
 	public static class Steps
 	{
-		public static T721974Repo repo = T721974Repo.Instance;
-		//public const string SNOOZEALERT_MENU = @"/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@automationid='menuToolsGrooming']";
+		public static OperatorSecurityRoleRepo repo = OperatorSecurityRoleRepo.Instance;
 		public const string SNOOZEALERT_MENU = @"/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@automationid='snoozeAllAlertsToolMenu']";
 		
 		public static void SelectSnoozeAlertMenuItem()
@@ -24,8 +23,15 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			try
 			{
 				Ranorex.MenuItem snoozeMenuItem = SNOOZEALERT_MENU;
-				if(snoozeMenuItem != null) snoozeMenuItem.ClickThis();
-				Reports.ReportLog("Selected SnoozeAlert MenuItem", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				if(snoozeMenuItem != null) 
+				{	
+					snoozeMenuItem.ClickThis();
+					Reports.ReportLog("Selected SnoozeAlert MenuItem", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				}
+				else
+				Reports.ReportLog("MenuItem SnoozeAlert not Selected", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+				
+					
 			}
 			catch (Exception ex)
 			{
@@ -33,11 +39,176 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			}
 		}
 		
+		public static void RightClickMonitoredServer()
+		{ 
+			try
+			{
+				var allServers = repo.Application.AllServers;
+				Report.Info(allServers.Items.Count.ToString());
+				if(allServers.Items.Count>=1)
+				{
+					allServers.Items[0].Click(System.Windows.Forms.MouseButtons.Right);
+					Reports.ReportLog("Clicked Server ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				}
+				else
+				{
+					Reports.ReportLog("No Server Found. Please Add Server.", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					Validate.Fail("No Server Found. Please Add Server.");
+				}
+				
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : RightClickMonitoredServer :" + ex.Message);
+			}
+		}
+		
+		public static void ClickServersInLeftPane()
+		{ 
+			try
+			{
+				repo.Application.Servers.ClickThis();
+				Reports.ReportLog("Clicked Servers in Left Pane ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : ClickServersInLeftPane :" + ex.Message);
+			}
+		}
+		
+		public static void ClickSnoozeAlertContextMenu()
+		{ 
+			try
+			{
+				repo.SQLdmDesktopClient.SnoozeAlerts_ContextMenu.ClickThis();
+				Reports.ReportLog("Snooze Server Context Menu Clicked  ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : SnoozeServer :" + ex.Message);
+			}
+		}
+		
+		public static void ClickMaintainceModeContextMenu()
+		{ 
+			try
+			{
+				repo.SQLdmDesktopClient.MaintenanceMode.ClickThis();
+				Reports.ReportLog("Maintenance Mode Context Menu Clicked  ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : ClickMaintainceModeContextMenu :" + ex.Message);
+			}
+		}
+		
+		public static void EnableMaintainceMode()
+		{ 
+			try
+			{
+				if(repo.SQLdmDesktopClient.EnableMenuItem.Enabled)
+				{
+					repo.SQLdmDesktopClient.EnableMenuItem.Click();
+					Reports.ReportLog("Maintenance Mode is Enabled ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				}
+				else if(repo.SQLdmDesktopClient.DisableMenuItem.Enabled)
+				{
+					repo.SQLdmDesktopClient.DisableMenuItem.Click();
+					Reports.ReportLog("Maintenance Mode is Disabled ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				}
+				else
+				{
+					Reports.ReportLog("Maintenance Mode is not applied", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					Validate.Fail("Maintenance Mode is not applied");
+				}
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : EnableMaintainceMode :" + ex.Message);
+			}
+		}
+		
+		public static void VerifyMaintainceModeIsChanged()
+		{ 
+			try
+			{
+				RightClickMonitoredServer();
+        	    ClickMaintainceModeContextMenu();
+        	    
+        	    if(repo.SQLdmDesktopClient.EnableMenuItem.Enabled)
+					Reports.ReportLog("Maintaince Mode Is Enabled successfully ! ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+        	    else if(repo.SQLdmDesktopClient.DisableMenuItem.Enabled)
+				{
+					Reports.ReportLog("Maintaince Mode is Disabled successfully ! ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				}
+        	    else
+        	    {
+        	    	Reports.ReportLog("Maintaince Mode is Disabled successfully. ", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					Validate.Fail("Maintaince Mode Not applied successfully.");
+        	    }
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : VerifyMaintainceModeIsChanged :" + ex.Message);
+			}
+		}
+		
+		public static void VerifyMaintainceModeContextMenuItems()
+		{ 
+			try
+			{	
+				if(!repo.SQLdmDesktopClient.EnableMenuItemInfo.Exists())
+				{
+					Reports.ReportLog("No Server Found. Please Add Server.", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					Validate.Fail("No Server Found. Please Add Server.");
+				}
+				if(!repo.SQLdmDesktopClient.DisableMenuItemInfo.Exists())
+				{
+					Reports.ReportLog("No Server Found. Please Add Server.", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					Validate.Fail("No Server Found. Please Add Server.");
+				}
+				if(!repo.SQLdmDesktopClient.ScheduleInfo.Exists())
+				{
+					Reports.ReportLog("No Server Found. Please Add Server.", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					Validate.Fail("No Server Found. Please Add Server.");
+				}
+				
+					
+				Reports.ReportLog("Verified Maintenance Mode Items: Enabled, Disables and Scheduled are present ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : VerifyMaintainceModeContextMenuItems :" + ex.Message);
+			}
+		}
+		
+		public static void VerifyServerSnoozed()
+		{ 
+			try
+			{
+				RightClickMonitoredServer();
+				
+				if(!repo.SQLdmDesktopClient.SnoozeAlerts_ContextMenu.Enabled) 
+					Reports.ReportLog("SnoozeAlert is applied successfully ! ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				else
+				{
+					Reports.ReportLog("SnoozeAlert Not applied successfully. ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					Validate.Fail("SnoozeAlert Not applied successfully.");
+				}
+				
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : VerifyServerSnoozed :" + ex.Message);
+			}
+		}
+		
 		public static void SetSnoozeAlertTime()
 		{ 
 			try
 			{
-				repo.SnoozeAlertsDialog.SnooozeAlertTime.TextValue = "2";
+				repo.SnoozeAlertsDialog.SnooozeAlertTime.TextValue = "10";
 				repo.SnoozeAlertsDialog.OkButton.ClickThis();
 				Reports.ReportLog("SnoozeAlert Time applied successfully ! ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 			}
@@ -381,6 +552,55 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			catch(Exception ex)
 			{
 				throw new Exception("Failed : DeleteAddedUser : " + ex.Message);
+			}
+		}
+		
+		public static void ClickCntextMenuItem(string textValue)
+		{ 
+			try
+			{	
+				//var sQLdmDesktopClient = repo.SQLdmDesktopClient;
+				//bool isFound = false;
+				repo.SQLdmDesktopClient.SelfInfo.WaitForItemExists(2000);
+				//repo.SQLdmDesktopClient.MaintenanceModeInfo.WaitForItemExists(2000);
+				Ranorex.ContextMenu contextMenuItems = @".//contextmenu[@processname='SQLdmDesktopClient']";
+				if(contextMenuItems != null)
+				{
+					
+				}
+				
+//				Report.Info(contextMenuItems.Children.Count.ToString());
+//				Report.Info(contextMenuItems.Children[0].ToString());
+//				Ranorex.MenuItem mi = null;
+//				//Report.Info(contextMenuItems.Checked.Count.ToString());
+//				//repo.SQLdmDesktopClient.SnoozeAlerts_ContextMenu.ClickThis();
+//				foreach(Ranorex.Adapter item in contextMenuItems.Children)
+//				{
+//					
+//   Ranorex.Separator sep = item.As<Ranorex.Separator>();  
+//    if (sep != null)  
+//        Report.Info("Seperator!");  
+//    
+//					mi = item.As<Ranorex.MenuItem>();
+//					 
+//					if(mi.Text.Contains(textValue))
+//					{
+//						isFound = true; break;
+//					}
+//				}
+//				
+//				if(isFound)
+//				{
+//					mi.ClickThis();
+//					Reports.ReportLog("Context Menu '" +  textValue + "' Clicked ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+//				}
+//				else
+//					Reports.ReportLog("Context Menu '" +  textValue + "' does not exists ", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+//				
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : SnoozeServer :" + ex.Message);
 			}
 		}
 		

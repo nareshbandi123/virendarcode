@@ -104,5 +104,56 @@ namespace AutomationSQLdm.Extensions
 				return false;
 			}
 		}
+		
+		
+		public static TreeItem GetChildItem(this Ranorex.TreeItem item, string key, bool expand = true)
+        {
+            TreeItem childItem = null;
+            try 
+            {
+                foreach (var child in item.Items) 
+                {
+                    if(child.Text == key)
+                    {
+                        if(expand) child.Expand();
+                        childItem = child;
+                        break;
+                    }
+                }
+            } 
+            catch(Exception ex)
+            {
+                throw new Exception("Failed : GetChildItem : " + ex.Message);
+            }
+            return childItem;
+        }
+        
+        public static TreeItem GetChildItem(this Ranorex.Tree item, string key, bool expand = true)
+        {
+            TreeItem childItem = null;
+            try 
+            {
+                foreach (var child in item.Items) 
+                {
+                    if(child.Text == key)
+                    {
+                        if(expand) child.Expand();
+                        childItem = child;
+                        break;
+                    }
+                }
+            } 
+            catch(Exception ex)
+            {
+                throw new Exception("Failed : GetChildItem : " + ex.Message);
+            }
+            return childItem;
+        }
+        
+        public static void RightClick(this Ranorex.TreeItem item)
+        {
+        	Mouse.Click(item,System.Windows.Forms.MouseButtons.Right);
+        }
+
 }
 }

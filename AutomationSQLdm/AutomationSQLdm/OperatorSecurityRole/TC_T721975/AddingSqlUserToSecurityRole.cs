@@ -39,8 +39,8 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721975
         	{
         	  Steps.ClickAdministration();
         	  Steps.ClickApplicationSecurity();
-//        	  Steps.ClickEnableSecurity();
-//        	  Steps.AcceptExceptionMessage();
+        	  Steps.ClickEnableSecurity();
+        	  Steps.AcceptExceptionMessage();
         	  Steps.ClickToAddUsers();
         	  Steps.ClickNextButton();
         	  Steps.EnterDomianUserName(Constants.NewSqlUser);
