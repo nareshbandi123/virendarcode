@@ -144,6 +144,9 @@
       <RepositoryCode>true</RepositoryCode>
       <id>5b210215-ec15-4cdb-851e-1c68970dbe47</id>
     </Compile>
+    <Compile Include="OperatorSecurityRole\TC_T721980\VerifyMaintenanceModeAfterSqlUserLogin.cs">
+      <id>559214b6-a5f0-4a19-af2e-ece3752d9b63</id>
+    </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721993\VerifyMaintenanceModeForSqlUser.cs">
       <id>f1f6dc04-fc7c-446e-9726-34c5104b7858</id>
     </Compile>
@@ -260,6 +263,9 @@
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721992\VerifySnoozeAlertsForFewMinutesForSqlUser.cs">
       <id>46576976-b679-4d9c-8546-a33cc357539b</id>
+    </Compile>
+    <Compile Include="OperatorSecurityRole\TC_T721994\VerifySnoozeAlertsForFewMinutesForWindowsUser.cs">
+      <id>61bbbdcc-dc99-4a6c-b22a-bbc76fac1e50</id>
     </Compile>
     <Compile Include="Program.cs">
       <id>5814e780-ff95-4e51-a14a-9bc079e4f89d</id>
@@ -408,6 +414,12 @@
     </Folder>
     <Folder Include="BVT\TC_T722131">
       <id>8ec1689f-7e37-4577-aed3-6b7242efee1f</id>
+    </Folder>
+    <Folder Include="OperatorSecurityRole\TC_T721980">
+      <id>88aee050-00fc-4c7b-8fd1-0954b89b0bd2</id>
+    </Folder>
+    <Folder Include="OperatorSecurityRole\TC_T721994">
+      <id>8e713023-d15b-4f8b-a377-d1320ff1ab26</id>
     </Folder>
     <Folder Include="OperatorSecurityRole\TC_T721993">
       <id>8769d1d1-bece-4770-9ee6-4735bb590887</id>

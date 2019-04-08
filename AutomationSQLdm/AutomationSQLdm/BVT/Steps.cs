@@ -16,6 +16,7 @@ using Ranorex;
 using Ranorex.Core;
 using Ranorex.Core.Repository;
 using Ranorex.Core.Testing;
+//using Ranorex
 
 namespace AutomationSQLdm.BVT
 {
@@ -143,20 +144,31 @@ namespace AutomationSQLdm.BVT
 		
 		public static void VerifyImage123()
 		{
-			if(repo.Application.ElementBrInfo.Exists())
+			try
 			{
-				CompressedImage BarChart = repo.Application.ElementBrInfo.GetCPU();
-				Imaging.FindOptions options = Imaging.FindOptions.Default;
-				RepoItemInfo info = repo.Application.ElementBrInfo;
-				bool isvalid = Validate.ContainsImage(info, BarChart, options,"After drag Currencycode to Color Chart data image comparision", false);
+				if(repo.Application.ElementBrInfo.Exists())
+				{
+					CompressedImage BarChart = repo.Application.ElementBrInfo.GetCPU();
+					
+					Imaging.FindOptions MyFindOptions = new Imaging.FindOptions(0.40);
+					
+					Bitmap bmp = Imaging.CaptureImage(repo.Application.ElementBr);
+					bool isvalid = Imaging.Compare(bmp, BarChart, MyFindOptions);
+					if(isvalid)
+					{
+						Reports.ReportLog("PopupMessage Exists", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					
+				}
 			}
-		}
-//		catch (Exception ex)
-//		{
-//			throw new Exception("Failed : ValidateCurrencycodeColorChart  : " + ex.Message);
-//		}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : ValidateCurrencycodeColorChart  : " + ex.Message);
+			}
 
-	}
-	
+	   }
+  
+    }
 }
+	
 

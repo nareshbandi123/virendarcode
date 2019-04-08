@@ -17,6 +17,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 	{
 		public static OperatorSecurityRoleRepo repo = OperatorSecurityRoleRepo.Instance;
 		public const string SNOOZEALERT_MENU = @"/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@automationid='snoozeAllAlertsToolMenu']";
+		public const string MAINTAINANCEMODE_MENU = @"/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@automationid='MaintenanceModeButtonKey']";
 		
 		public static void SelectSnoozeAlertMenuItem()
 		{ 
@@ -30,7 +31,6 @@ namespace AutomationSQLdm.OperatorSecurityRole
 				}
 				else
 				Reports.ReportLog("MenuItem SnoozeAlert not Selected", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
-				
 					
 			}
 			catch (Exception ex)
@@ -38,6 +38,26 @@ namespace AutomationSQLdm.OperatorSecurityRole
 				throw new Exception("Failed : SelectSnoozeAlertMenuItem :" + ex.Message);
 			}
 		}
+		
+		public static void SelectMaintainceModeMenuItem()
+		{ 
+			try
+			{
+				Ranorex.MenuItem snoozeMenuItem = MAINTAINANCEMODE_MENU;
+				if(snoozeMenuItem != null) 
+				{	
+					snoozeMenuItem.ClickThis();
+					Reports.ReportLog("Selected SelectMaintainceModeMenuItem MenuItem", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				}
+				else
+				Reports.ReportLog("MenuItem SelectMaintainceModeMenuItem not Selected", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : SelectMaintainceModeMenuItem :" + ex.Message);
+			}
+		}
+		
 		
 		public static void RightClickMonitoredServer()
 		{ 
@@ -107,14 +127,14 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{ 
 			try
 			{
-				if(repo.SQLdmDesktopClient.EnableMenuItem.Enabled)
+				if(repo.SQLdmDesktopClient.EnableContextMenuItem.Enabled)
 				{
-					repo.SQLdmDesktopClient.EnableMenuItem.Click();
+					repo.SQLdmDesktopClient.EnableContextMenuItem.Click();
 					Reports.ReportLog("Maintenance Mode is Enabled ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 				}
-				else if(repo.SQLdmDesktopClient.DisableMenuItem.Enabled)
+				else if(repo.SQLdmDesktopClient.DisableContextMenuItem.Enabled)
 				{
-					repo.SQLdmDesktopClient.DisableMenuItem.Click();
+					repo.SQLdmDesktopClient.DisableContextMenuItem.Click();
 					Reports.ReportLog("Maintenance Mode is Disabled ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 				}
 				else
@@ -136,9 +156,9 @@ namespace AutomationSQLdm.OperatorSecurityRole
 				RightClickMonitoredServer();
         	    ClickMaintainceModeContextMenu();
         	    
-        	    if(repo.SQLdmDesktopClient.EnableMenuItem.Enabled)
+        	    if(repo.SQLdmDesktopClient.EnableContextMenuItem.Enabled)
 					Reports.ReportLog("Maintaince Mode Is Enabled successfully ! ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
-        	    else if(repo.SQLdmDesktopClient.DisableMenuItem.Enabled)
+        	    else if(repo.SQLdmDesktopClient.DisableContextMenuItem.Enabled)
 				{
 					Reports.ReportLog("Maintaince Mode is Disabled successfully ! ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 				}
@@ -158,17 +178,46 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{ 
 			try
 			{	
-				if(!repo.SQLdmDesktopClient.EnableMenuItemInfo.Exists())
+				if(!repo.SQLdmDesktopClient.EnableContextMenuItemInfo.Exists())
 				{
 					Reports.ReportLog("No Server Found. Please Add Server.", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
 					Validate.Fail("No Server Found. Please Add Server.");
 				}
-				if(!repo.SQLdmDesktopClient.DisableMenuItemInfo.Exists())
+				if(!repo.SQLdmDesktopClient.DisableContextMenuItemInfo.Exists())
 				{
 					Reports.ReportLog("No Server Found. Please Add Server.", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
 					Validate.Fail("No Server Found. Please Add Server.");
 				}
-				if(!repo.SQLdmDesktopClient.ScheduleInfo.Exists())
+				if(!repo.SQLdmDesktopClient.ScheduleConextMenuItemInfo.Exists())
+				{
+					Reports.ReportLog("No Server Found. Please Add Server.", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					Validate.Fail("No Server Found. Please Add Server.");
+				}
+				
+					
+				Reports.ReportLog("Verified Maintenance Mode Items: Enabled, Disables and Scheduled are present ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : VerifyMaintainceModeContextMenuItems :" + ex.Message);
+			}
+		}
+		
+		public static void VerifyMaintainceModeMenuItems()
+		{ 
+			try
+			{	
+				if(!repo.SQLdmDesktopClient.MaintenanceModeEnableMenuItemInfo.Exists())
+				{
+					Reports.ReportLog("No Server Found. Please Add Server.", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					Validate.Fail("No Server Found. Please Add Server.");
+				}
+				if(!repo.SQLdmDesktopClient.MaintenanceModeDisableMenuItemInfo.Exists())
+				{
+					Reports.ReportLog("No Server Found. Please Add Server.", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					Validate.Fail("No Server Found. Please Add Server.");
+				}
+				if(!repo.SQLdmDesktopClient.MaintenanceModeScheduleMenuItemInfo.Exists())
 				{
 					Reports.ReportLog("No Server Found. Please Add Server.", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
 					Validate.Fail("No Server Found. Please Add Server.");
@@ -543,8 +592,6 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{
 			try
 			{
-				//repo.AddPermissionWizard.ViewDataAcknowledgwAlarmInfo.WaitForExists(new Duration(500));
-				//repo.Application.NewWindowsUserAdded.Click();
 				repo.Application.btnDelete.Click();
 				repo.ExceptionForm.btnYes.Click();
 				Reports.ReportLog("New User Deleted Successfully ! ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
@@ -554,6 +601,44 @@ namespace AutomationSQLdm.OperatorSecurityRole
 				throw new Exception("Failed : DeleteAddedUser : " + ex.Message);
 			}
 		}
+		
+		public static void ConnectDMRepo()
+		{
+			try
+			{
+				repo.Application.File.Click();
+				Reports.ReportLog("Clicked File Menu Successfully ! ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+				repo.SQLdmDesktopClient.ConnectToSQLDMRepository.Click();
+				Reports.ReportLog("Clicked Menuitem ConnectToSQLDMRepository Successfully ! ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+				Ranorex.ComboBox combobox = repo.RepositoryConnectionDialog.AuthenticationDropDownList;
+				combobox.Click();
+				ListItem lst_userItem = combobox.FindSingle<ListItem>("/list/listitem[@text='SQL Server Authentication']");
+				lst_userItem.Focus();  
+				lst_userItem.Click(); 
+				Reports.ReportLog("SQL Server Authentication Selected ", Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+				repo.RepositoryConnectionDialog.Username.PressKeys(Constants.SqlSystemUser);
+				Reports.ReportLog("Username : " + Constants.NewSqlUser + "Entered Successfully  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+				
+				repo.RepositoryConnectionDialog.Password.PressKeys(Constants.SqlSystemUserPassword);
+				Reports.ReportLog("Passsword Entered Successfully  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+				repo.RepositoryConnectionDialog.ConnectButton.ClickThis();
+				Reports.ReportLog("Clicked Connect Button Successfully !  " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+				
+				if(repo.Application.CaptionText.TextValue.Contains(Constants.SQLdmRepository))
+					Reports.ReportLog("Connected to SQLdmRepository Successfully !  "   , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+				else
+				{
+					Reports.ReportLog("Failed to connect to SQLdmRepository " , Reports.SQLdmReportLevel.Fail, null, Configuration.Config.TestCaseName);
+					throw new Exception("Failed to connect to SQLdmRepository ");
+				}
+			}
+			catch(Exception ex)
+			{
+				throw new Exception("Failed : ConnectDMRepo : " + ex.Message);
+			}
+		}
+		
+		
 		
 		public static void ClickCntextMenuItem(string textValue)
 		{ 

@@ -30,7 +30,6 @@ namespace AutomationSQLdm.BVT
         BVTRepoFolders.ApplicationAppFolder _application;
         BVTRepoFolders.SQLdmDesktopClientAppFolder _sqldmdesktopclient;
         BVTRepoFolders.MonitoredSqlServerInstancePropertiesDialAppFolder _monitoredsqlserverinstancepropertiesdial;
-        BVTRepoFolders.CPUAppFolder _cpu;
         BVTRepoFolders.ExceptionMessageBoxFormAppFolder _exceptionmessageboxform;
 
         /// <summary>
@@ -51,7 +50,6 @@ namespace AutomationSQLdm.BVT
             _application = new BVTRepoFolders.ApplicationAppFolder(this);
             _sqldmdesktopclient = new BVTRepoFolders.SQLdmDesktopClientAppFolder(this);
             _monitoredsqlserverinstancepropertiesdial = new BVTRepoFolders.MonitoredSqlServerInstancePropertiesDialAppFolder(this);
-            _cpu = new BVTRepoFolders.CPUAppFolder(this);
             _exceptionmessageboxform = new BVTRepoFolders.ExceptionMessageBoxFormAppFolder(this);
         }
 
@@ -99,15 +97,6 @@ namespace AutomationSQLdm.BVT
         }
 
         /// <summary>
-        /// The CPU folder.
-        /// </summary>
-        [RepositoryFolder("7b4e5881-77f5-4a98-8a78-e1b6f4c30e48")]
-        public virtual BVTRepoFolders.CPUAppFolder CPU
-        {
-            get { return _cpu; }
-        }
-
-        /// <summary>
         /// The ExceptionMessageBoxForm folder.
         /// </summary>
         [RepositoryFolder("5dc6a578-8823-4687-9328-acb0b68d03c0")]
@@ -130,6 +119,7 @@ namespace AutomationSQLdm.BVT
         public partial class ApplicationAppFolder : RepoGenBaseFolder
         {
             ElementBrInfoClass _elementbrInfo;
+            RepoItemInfo _elementbr1Info;
 
             /// <summary>
             /// Creates a new Application  folder.
@@ -138,6 +128,7 @@ namespace AutomationSQLdm.BVT
                     base("Application", "/form[@title~'^Idera\\ SQL\\ diagnostic\\ mana']", parentFolder, 30000, null, true, "1a73f651-c755-42fc-8b6e-622d9bbcf5f6", "")
             {
                 _elementbrInfo = new ElementBrInfoClass(this);
+                _elementbr1Info = new RepoItemInfo(this, "ElementBr1", "statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//container[@controlname='dashboardTableLayoutPanel']/container[@controlname='CpuControl']//element[@controlname='callRatesChart']/element[@controlname='br']", 30000, null, "857edc88-4c04-4db0-acd2-165ce78a8dd8");
             }
 
             /// <summary>
@@ -220,6 +211,30 @@ namespace AutomationSQLdm.BVT
                 get
                 {
                     return _elementbrInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ElementBr1 item.
+            /// </summary>
+            [RepositoryItem("857edc88-4c04-4db0-acd2-165ce78a8dd8")]
+            public virtual Ranorex.Unknown ElementBr1
+            {
+                get
+                {
+                    return _elementbr1Info.CreateAdapter<Ranorex.Unknown>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ElementBr1 item info.
+            /// </summary>
+            [RepositoryItemInfo("857edc88-4c04-4db0-acd2-165ce78a8dd8")]
+            public virtual RepoItemInfo ElementBr1Info
+            {
+                get
+                {
+                    return _elementbr1Info;
                 }
             }
         }
@@ -533,107 +548,6 @@ namespace AutomationSQLdm.BVT
                 get
                 {
                     return _wmitestbuttonInfo;
-                }
-            }
-        }
-
-        /// <summary>
-        /// The CPUAppFolder folder.
-        /// </summary>
-        [RepositoryFolder("7b4e5881-77f5-4a98-8a78-e1b6f4c30e48")]
-        public partial class CPUAppFolder : RepoGenBaseFolder
-        {
-            ChartInfoClass _chartInfo;
-
-            /// <summary>
-            /// Creates a new CPU  folder.
-            /// </summary>
-            public CPUAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("CPU", "/form[@title~'^Idera\\ SQL\\ diagnostic\\ mana']/statusbar[@automationid='statusBar']", parentFolder, 30000, null, true, "7b4e5881-77f5-4a98-8a78-e1b6f4c30e48", "")
-            {
-                _chartInfo = new ChartInfoClass(this);
-            }
-
-            /// <summary>
-            /// The ChartInfoClass folder.
-            /// </summary>
-            [RepositoryItemInfo("b345f5bc-9c04-43ca-8ab5-52e55a6a1000")]
-            public class ChartInfoClass : RepoItemInfo
-            {
-                /// <summary>
-                /// ChartInfoClass class constructor.
-                /// </summary>
-                public ChartInfoClass(RepoGenBaseFolder parentFolder)
-                    : base(parentFolder, "Chart", ".//container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//container[@controlname='dashboardTableLayoutPanel']/container[@controlname='CpuControl']//element[@controlname='br']", 30000, null, "b345f5bc-9c04-43ca-8ab5-52e55a6a1000")
-                { }
-
-                /// <summary>
-                /// Gets the Screenshot1 item image.
-                /// </summary>
-                /// <returns>The Screenshot1 image.</returns>
-                [RepositoryImage("48ebf283-477f-4e65-a4c3-085d5ee781f6")]
-                public CompressedImage GetScreenshot1()
-                {
-                    return GetImage("48ebf283-477f-4e65-a4c3-085d5ee781f6");
-                }
-
-                /// <summary>
-                /// Gets the Screenshot1 item image.
-                /// </summary>
-                /// <param name="cropRect">The bounds of the sub-image to return.</param>
-                /// <returns>The cropped image.</returns>
-                [RepositoryImage("48ebf283-477f-4e65-a4c3-085d5ee781f6")]
-                public CompressedImage GetScreenshot1(System.Drawing.Rectangle cropRect)
-                {
-                    return GetImage("48ebf283-477f-4e65-a4c3-085d5ee781f6", cropRect);
-                }
-            }
-
-            /// <summary>
-            /// The Self item.
-            /// </summary>
-            [RepositoryItem("7b4e5881-77f5-4a98-8a78-e1b6f4c30e48")]
-            public virtual Ranorex.StatusBar Self
-            {
-                get
-                {
-                    return _selfInfo.CreateAdapter<Ranorex.StatusBar>(true);
-                }
-            }
-
-            /// <summary>
-            /// The Self item info.
-            /// </summary>
-            [RepositoryItemInfo("7b4e5881-77f5-4a98-8a78-e1b6f4c30e48")]
-            public virtual RepoItemInfo SelfInfo
-            {
-                get
-                {
-                    return _selfInfo;
-                }
-            }
-
-            /// <summary>
-            /// The Chart item.
-            /// </summary>
-            [RepositoryItem("b345f5bc-9c04-43ca-8ab5-52e55a6a1000")]
-            public virtual Ranorex.Unknown Chart
-            {
-                get
-                {
-                    return _chartInfo.CreateAdapter<Ranorex.Unknown>(true);
-                }
-            }
-
-            /// <summary>
-            /// The Chart item info.
-            /// </summary>
-            [RepositoryItemInfo("b345f5bc-9c04-43ca-8ab5-52e55a6a1000")]
-            public virtual ChartInfoClass ChartInfo
-            {
-                get
-                {
-                    return _chartInfo;
                 }
             }
         }

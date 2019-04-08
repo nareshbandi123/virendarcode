@@ -78,6 +78,16 @@ AAAASUVORK5CYII=
 				</image>
 				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//container[@controlname='dashboardTableLayoutPanel']/container[@controlname='CpuControl']//element[@controlname='br']
 			</item>
+			<item
+			addcaps="unknown,control,nativewindow"
+			capname="unknown"
+			id="857edc88-4c04-4db0-acd2-165ce78a8dd8"
+			name="ElementBr1"
+			refimgid="89cf9aeb-8ecf-4201-92b7-213a3d3a7079"
+			refpath="/form[@title='Idera SQL diagnostic manager - SQLdmRepository (CIGNITI-W12R2-1\SQL2016)']/statusbar[@automationid='statusBar']/container[2]/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/container[@caption='']/container[@controlname='_child']/container[@controlname='ServerSummaryView4']/container[@controlname='serverOverviewContentPanel']/container[@controlname='dashboardTableLayoutPanel']/container[@controlname='CpuControl']/container[@controlname='mainTableLayoutPanel']/container[@controlname='callRatesPanel']/element[@controlname='callRatesChart']/element[@controlname='br']"
+			searchtimeout="30000ms">
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//container[@controlname='dashboardTableLayoutPanel']/container[@controlname='CpuControl']//element[@controlname='callRatesChart']/element[@controlname='br']
+			</item>
 			<basepath>
 				/form[@title~'^Idera\ SQL\ diagnostic\ mana']
 			</basepath>
@@ -251,93 +261,6 @@ IAfenzqB+3AxzvwdvMjZTPWSFCy1CfivRuGVVscuCV63CZxGQX1RrBxwFe5idFsWTzPXMZKh4aAq
 DTVWONoF+9qgoOUH67U9kYG9hiectECpCbTnIV/3ndz6ADmVr1iReyEykFc3yJ5zsLM5zPZaH1sq
 XrLp0EM2aG+RntUiB+ZT6fxfIsRPbYnQgbXhGFYAAAAASUVORK5CYII=
 			</icon>
-		</appfolder>
-		<appfolder
-		capname="statusbar"
-		id="7b4e5881-77f5-4a98-8a78-e1b6f4c30e48"
-		isrooted="True"
-		name="CPU"
-		searchtimeout="30000ms"
-		usecache="True">
-			<item
-			capname="unknown"
-			id="b345f5bc-9c04-43ca-8ab5-52e55a6a1000"
-			name="Chart"
-			searchtimeout="30000ms">
-				<image
-				guid="48ebf283-477f-4e65-a4c3-085d5ee781f6"
-				name="Screenshot1">
-					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
-				</image>
-				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//container[@controlname='dashboardTableLayoutPanel']/container[@controlname='CpuControl']//element[@controlname='br']
-			</item>
-			<basepath>
-				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']
-			</basepath>
 		</appfolder>
 		<appfolder
 		addcaps="form,control,nativewindow"

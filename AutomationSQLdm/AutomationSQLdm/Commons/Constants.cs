@@ -19,6 +19,12 @@ namespace AutomationSQLdm.Commons
 		
 		public const string NewWindowsUser = @"SIMPSONS\administrator1";
 		public const string NewSqlUser = @"sa1";
+		public const string NewSqlUserPassword = @"Admin@123";
+		
+		public const string SqlSystemUser = @"sa";
+		public const string SqlSystemUserPassword = @"Admin@123";
+		
+		public const string SQLdmRepository = @"SQLdmRepository";
 #endregion
 	}
 }

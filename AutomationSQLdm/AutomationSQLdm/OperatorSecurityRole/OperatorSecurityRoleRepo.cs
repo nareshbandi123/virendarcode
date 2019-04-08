@@ -33,6 +33,8 @@ namespace AutomationSQLdm.OperatorSecurityRole
         OperatorSecurityRoleRepoFolders.PermissionPropertyDialogAppFolder _permissionpropertydialog;
         OperatorSecurityRoleRepoFolders.SQLdmDesktopClientAppFolder _sqldmdesktopclient;
         OperatorSecurityRoleRepoFolders.SnoozeAlertsDialogAppFolder _snoozealertsdialog;
+        OperatorSecurityRoleRepoFolders.RepositoryConnectionDialogAppFolder _repositoryconnectiondialog;
+        OperatorSecurityRoleRepoFolders.List1000AppFolder _list1000;
 
         /// <summary>
         /// Gets the singleton class instance representing the OperatorSecurityRoleRepo element repository.
@@ -55,6 +57,8 @@ namespace AutomationSQLdm.OperatorSecurityRole
             _permissionpropertydialog = new OperatorSecurityRoleRepoFolders.PermissionPropertyDialogAppFolder(this);
             _sqldmdesktopclient = new OperatorSecurityRoleRepoFolders.SQLdmDesktopClientAppFolder(this);
             _snoozealertsdialog = new OperatorSecurityRoleRepoFolders.SnoozeAlertsDialogAppFolder(this);
+            _repositoryconnectiondialog = new OperatorSecurityRoleRepoFolders.RepositoryConnectionDialogAppFolder(this);
+            _list1000 = new OperatorSecurityRoleRepoFolders.List1000AppFolder(this);
         }
 
 #region Variables
@@ -138,6 +142,24 @@ namespace AutomationSQLdm.OperatorSecurityRole
         {
             get { return _snoozealertsdialog; }
         }
+
+        /// <summary>
+        /// The RepositoryConnectionDialog folder.
+        /// </summary>
+        [RepositoryFolder("045423ee-b2db-4e1b-9c8a-6f1ff05a9a01")]
+        public virtual OperatorSecurityRoleRepoFolders.RepositoryConnectionDialogAppFolder RepositoryConnectionDialog
+        {
+            get { return _repositoryconnectiondialog; }
+        }
+
+        /// <summary>
+        /// The List1000 folder.
+        /// </summary>
+        [RepositoryFolder("97290bd8-21d4-4e4f-88b1-a8cf119886e4")]
+        public virtual OperatorSecurityRoleRepoFolders.List1000AppFolder List1000
+        {
+            get { return _list1000; }
+        }
     }
 
     /// <summary>
@@ -163,6 +185,8 @@ namespace AutomationSQLdm.OperatorSecurityRole
             RepoItemInfo _serversInfo;
             RepoItemInfo _sqldmtodayInfo;
             RepoItemInfo _allserversareinmaintenancemodeInfo;
+            RepoItemInfo _fileInfo;
+            RepoItemInfo _captiontextInfo;
 
             /// <summary>
             /// Creates a new Application  folder.
@@ -181,6 +205,8 @@ namespace AutomationSQLdm.OperatorSecurityRole
                 _serversInfo = new RepoItemInfo(this, "Servers", "statusbar[@automationid='statusBar']//container[@automationid='navigationPaneHost']//container[@controlname='NavigationPaneControl']//button[@accessiblename='Servers']", 30000, null, "ff1ed87b-54ce-425a-bd29-0d68843551f3");
                 _sqldmtodayInfo = new RepoItemInfo(this, "SQLDMToday", "statusbar[@automationid='statusBar']//button[@automationid='toolBarTodayButton']/text[@caption='SQLDM Today']", 30000, null, "5bf580d6-74dd-4c4e-8621-62765e9408f9");
                 _allserversareinmaintenancemodeInfo = new RepoItemInfo(this, "AllServersAreInMaintenanceMode", ".//link[@controlname='statusSummaryDescriptionLabel']//link[@accessiblename~'^All\\ servers\\ are\\ in\\ mainte']", 30000, null, "0de91f77-1b72-475d-b7dc-323b95580868");
+                _fileInfo = new RepoItemInfo(this, "File", ".//list[@automationid='fileMenu']/picture[@automationid='HeaderPresenter']/text[@caption='File']", 30000, null, "0f4ec73c-5da5-467a-a21b-741d46fe8523");
+                _captiontextInfo = new RepoItemInfo(this, "CaptionText", "?/?/picture[@automationid='PART_WindowIcon']/text[@automationid='CaptionText']", 30000, null, "d79840b0-5e62-4ac0-a6b0-730140cf095e");
             }
 
             /// <summary>
@@ -468,6 +494,54 @@ namespace AutomationSQLdm.OperatorSecurityRole
                 get
                 {
                     return _allserversareinmaintenancemodeInfo;
+                }
+            }
+
+            /// <summary>
+            /// The File item.
+            /// </summary>
+            [RepositoryItem("0f4ec73c-5da5-467a-a21b-741d46fe8523")]
+            public virtual Ranorex.Text File
+            {
+                get
+                {
+                    return _fileInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The File item info.
+            /// </summary>
+            [RepositoryItemInfo("0f4ec73c-5da5-467a-a21b-741d46fe8523")]
+            public virtual RepoItemInfo FileInfo
+            {
+                get
+                {
+                    return _fileInfo;
+                }
+            }
+
+            /// <summary>
+            /// The CaptionText item.
+            /// </summary>
+            [RepositoryItem("d79840b0-5e62-4ac0-a6b0-730140cf095e")]
+            public virtual Ranorex.Text CaptionText
+            {
+                get
+                {
+                    return _captiontextInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The CaptionText item info.
+            /// </summary>
+            [RepositoryItemInfo("d79840b0-5e62-4ac0-a6b0-730140cf095e")]
+            public virtual RepoItemInfo CaptionTextInfo
+            {
+                get
+                {
+                    return _captiontextInfo;
                 }
             }
         }
@@ -861,9 +935,13 @@ namespace AutomationSQLdm.OperatorSecurityRole
             RepoItemInfo _snoozealertsInfo;
             RepoItemInfo _snoozealerts_contextmenuInfo;
             RepoItemInfo _maintenancemodeInfo;
-            RepoItemInfo _enablemenuitemInfo;
-            RepoItemInfo _disablemenuitemInfo;
-            RepoItemInfo _scheduleInfo;
+            RepoItemInfo _enablecontextmenuitemInfo;
+            RepoItemInfo _disablecontextmenuitemInfo;
+            RepoItemInfo _scheduleconextmenuitemInfo;
+            RepoItemInfo _connecttosqldmrepositoryInfo;
+            RepoItemInfo _maintenancemodeenablemenuitemInfo;
+            RepoItemInfo _maintenancemodedisablemenuitemInfo;
+            RepoItemInfo _maintenancemodeschedulemenuitemInfo;
 
             /// <summary>
             /// Creates a new SQLdmDesktopClient  folder.
@@ -874,9 +952,13 @@ namespace AutomationSQLdm.OperatorSecurityRole
                 _snoozealertsInfo = new RepoItemInfo(this, "SnoozeAlerts", "menuitem[@automationid='snoozeAllAlertsToolMenu']//text[@caption='Snooze Alerts...']", 30000, null, "5d3e6767-4d33-45b3-b059-d4982440ae5e");
                 _snoozealerts_contextmenuInfo = new RepoItemInfo(this, "SnoozeAlerts_ContextMenu", "menuitem[@accessiblename='Snooze Alerts...']", 30000, null, "b51f167c-fe06-4027-a22d-3ce03c36eaca");
                 _maintenancemodeInfo = new RepoItemInfo(this, "MaintenanceMode", "menuitem[@accessiblename='Maintenance Mode']", 30000, null, "b29e0a59-6005-42dc-ae63-c3eb5abbba14");
-                _enablemenuitemInfo = new RepoItemInfo(this, "EnableMenuItem", "menuitem[@accessiblename='Enable']", 30000, null, "27d1dc94-e3b6-4035-932a-e92f4ab8a68a");
-                _disablemenuitemInfo = new RepoItemInfo(this, "DisableMenuItem", "menuitem[@accessiblename='Disable']", 30000, null, "1e898b15-b2a8-4c87-93f1-1f89883639a4");
-                _scheduleInfo = new RepoItemInfo(this, "Schedule", "menuitem[@accessiblename='Schedule...']", 30000, null, "0ac235e4-98db-471e-8531-4ae47970120a");
+                _enablecontextmenuitemInfo = new RepoItemInfo(this, "EnableContextMenuItem", "menuitem[@accessiblename='Enable']", 30000, null, "27d1dc94-e3b6-4035-932a-e92f4ab8a68a");
+                _disablecontextmenuitemInfo = new RepoItemInfo(this, "DisableContextMenuItem", "menuitem[@accessiblename='Disable']", 30000, null, "1e898b15-b2a8-4c87-93f1-1f89883639a4");
+                _scheduleconextmenuitemInfo = new RepoItemInfo(this, "ScheduleConextMenuItem", "menuitem[@accessiblename='Schedule...']", 30000, null, "0ac235e4-98db-471e-8531-4ae47970120a");
+                _connecttosqldmrepositoryInfo = new RepoItemInfo(this, "ConnectToSQLDMRepository", "menuitem[@automationid='menuFileConnect']//text[@caption~'^Connect\\ to\\ SQLDM\\ Reposito']", 30000, null, "b0af1f43-8545-4ebc-87c7-28797f7524e0");
+                _maintenancemodeenablemenuitemInfo = new RepoItemInfo(this, "MaintenanceModeEnableMenuItem", "menuitem[@automationid='maintenanceModeEnableButtonKey']", 30000, null, "d2c4305a-4698-46ad-84e5-a40c309c3fe6");
+                _maintenancemodedisablemenuitemInfo = new RepoItemInfo(this, "MaintenanceModeDisableMenuItem", "menuitem[@automationid='maintenanceModeDisablettonKey']", 30000, null, "2f03dfc7-d8ce-4dd4-aab7-030571ed947d");
+                _maintenancemodeschedulemenuitemInfo = new RepoItemInfo(this, "MaintenanceModeScheduleMenuItem", "menuitem[@automationid='maintenanceModeScheduleButtonKey']", 30000, null, "10182fd7-0261-4e59-9fd9-1dc53a646b16");
             }
 
             /// <summary>
@@ -976,74 +1058,170 @@ namespace AutomationSQLdm.OperatorSecurityRole
             }
 
             /// <summary>
-            /// The EnableMenuItem item.
+            /// The EnableContextMenuItem item.
             /// </summary>
             [RepositoryItem("27d1dc94-e3b6-4035-932a-e92f4ab8a68a")]
-            public virtual Ranorex.MenuItem EnableMenuItem
+            public virtual Ranorex.MenuItem EnableContextMenuItem
             {
                 get
                 {
-                    return _enablemenuitemInfo.CreateAdapter<Ranorex.MenuItem>(true);
+                    return _enablecontextmenuitemInfo.CreateAdapter<Ranorex.MenuItem>(true);
                 }
             }
 
             /// <summary>
-            /// The EnableMenuItem item info.
+            /// The EnableContextMenuItem item info.
             /// </summary>
             [RepositoryItemInfo("27d1dc94-e3b6-4035-932a-e92f4ab8a68a")]
-            public virtual RepoItemInfo EnableMenuItemInfo
+            public virtual RepoItemInfo EnableContextMenuItemInfo
             {
                 get
                 {
-                    return _enablemenuitemInfo;
+                    return _enablecontextmenuitemInfo;
                 }
             }
 
             /// <summary>
-            /// The DisableMenuItem item.
+            /// The DisableContextMenuItem item.
             /// </summary>
             [RepositoryItem("1e898b15-b2a8-4c87-93f1-1f89883639a4")]
-            public virtual Ranorex.MenuItem DisableMenuItem
+            public virtual Ranorex.MenuItem DisableContextMenuItem
             {
                 get
                 {
-                    return _disablemenuitemInfo.CreateAdapter<Ranorex.MenuItem>(true);
+                    return _disablecontextmenuitemInfo.CreateAdapter<Ranorex.MenuItem>(true);
                 }
             }
 
             /// <summary>
-            /// The DisableMenuItem item info.
+            /// The DisableContextMenuItem item info.
             /// </summary>
             [RepositoryItemInfo("1e898b15-b2a8-4c87-93f1-1f89883639a4")]
-            public virtual RepoItemInfo DisableMenuItemInfo
+            public virtual RepoItemInfo DisableContextMenuItemInfo
             {
                 get
                 {
-                    return _disablemenuitemInfo;
+                    return _disablecontextmenuitemInfo;
                 }
             }
 
             /// <summary>
-            /// The Schedule item.
+            /// The ScheduleConextMenuItem item.
             /// </summary>
             [RepositoryItem("0ac235e4-98db-471e-8531-4ae47970120a")]
-            public virtual Ranorex.MenuItem Schedule
+            public virtual Ranorex.MenuItem ScheduleConextMenuItem
             {
                 get
                 {
-                    return _scheduleInfo.CreateAdapter<Ranorex.MenuItem>(true);
+                    return _scheduleconextmenuitemInfo.CreateAdapter<Ranorex.MenuItem>(true);
                 }
             }
 
             /// <summary>
-            /// The Schedule item info.
+            /// The ScheduleConextMenuItem item info.
             /// </summary>
             [RepositoryItemInfo("0ac235e4-98db-471e-8531-4ae47970120a")]
-            public virtual RepoItemInfo ScheduleInfo
+            public virtual RepoItemInfo ScheduleConextMenuItemInfo
             {
                 get
                 {
-                    return _scheduleInfo;
+                    return _scheduleconextmenuitemInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ConnectToSQLDMRepository item.
+            /// </summary>
+            [RepositoryItem("b0af1f43-8545-4ebc-87c7-28797f7524e0")]
+            public virtual Ranorex.Text ConnectToSQLDMRepository
+            {
+                get
+                {
+                    return _connecttosqldmrepositoryInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ConnectToSQLDMRepository item info.
+            /// </summary>
+            [RepositoryItemInfo("b0af1f43-8545-4ebc-87c7-28797f7524e0")]
+            public virtual RepoItemInfo ConnectToSQLDMRepositoryInfo
+            {
+                get
+                {
+                    return _connecttosqldmrepositoryInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MaintenanceModeEnableMenuItem item.
+            /// </summary>
+            [RepositoryItem("d2c4305a-4698-46ad-84e5-a40c309c3fe6")]
+            public virtual Ranorex.MenuItem MaintenanceModeEnableMenuItem
+            {
+                get
+                {
+                    return _maintenancemodeenablemenuitemInfo.CreateAdapter<Ranorex.MenuItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MaintenanceModeEnableMenuItem item info.
+            /// </summary>
+            [RepositoryItemInfo("d2c4305a-4698-46ad-84e5-a40c309c3fe6")]
+            public virtual RepoItemInfo MaintenanceModeEnableMenuItemInfo
+            {
+                get
+                {
+                    return _maintenancemodeenablemenuitemInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MaintenanceModeDisableMenuItem item.
+            /// </summary>
+            [RepositoryItem("2f03dfc7-d8ce-4dd4-aab7-030571ed947d")]
+            public virtual Ranorex.MenuItem MaintenanceModeDisableMenuItem
+            {
+                get
+                {
+                    return _maintenancemodedisablemenuitemInfo.CreateAdapter<Ranorex.MenuItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MaintenanceModeDisableMenuItem item info.
+            /// </summary>
+            [RepositoryItemInfo("2f03dfc7-d8ce-4dd4-aab7-030571ed947d")]
+            public virtual RepoItemInfo MaintenanceModeDisableMenuItemInfo
+            {
+                get
+                {
+                    return _maintenancemodedisablemenuitemInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MaintenanceModeScheduleMenuItem item.
+            /// </summary>
+            [RepositoryItem("10182fd7-0261-4e59-9fd9-1dc53a646b16")]
+            public virtual Ranorex.MenuItem MaintenanceModeScheduleMenuItem
+            {
+                get
+                {
+                    return _maintenancemodeschedulemenuitemInfo.CreateAdapter<Ranorex.MenuItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MaintenanceModeScheduleMenuItem item info.
+            /// </summary>
+            [RepositoryItemInfo("10182fd7-0261-4e59-9fd9-1dc53a646b16")]
+            public virtual RepoItemInfo MaintenanceModeScheduleMenuItemInfo
+            {
+                get
+                {
+                    return _maintenancemodeschedulemenuitemInfo;
                 }
             }
         }
@@ -1136,6 +1314,216 @@ namespace AutomationSQLdm.OperatorSecurityRole
                 get
                 {
                     return _okbuttonInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The RepositoryConnectionDialogAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("045423ee-b2db-4e1b-9c8a-6f1ff05a9a01")]
+        public partial class RepositoryConnectionDialogAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _authenticationdropdownlistInfo;
+            RepoItemInfo _usernameInfo;
+            RepoItemInfo _passwordInfo;
+            RepoItemInfo _connectbuttonInfo;
+
+            /// <summary>
+            /// Creates a new RepositoryConnectionDialog  folder.
+            /// </summary>
+            public RepositoryConnectionDialogAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("RepositoryConnectionDialog", "/form[@controlname='RepositoryConnectionDialog']", parentFolder, 30000, null, true, "045423ee-b2db-4e1b-9c8a-6f1ff05a9a01", "")
+            {
+                _authenticationdropdownlistInfo = new RepoItemInfo(this, "AuthenticationDropDownList", "?/?/combobox[@controlname='authenticationDropDownList']", 30000, null, "dc9cff80-6ea0-4c96-b2c2-4485849f86c2");
+                _usernameInfo = new RepoItemInfo(this, "Username", "container[@controlname='tableLayoutPanel1']/text[@controlname='userNameTextbox']/text[@accessiblerole='Text']", 30000, null, "5eeaae31-fd4d-4fbd-ac6c-515bb447de4b");
+                _passwordInfo = new RepoItemInfo(this, "Password", "container[@controlname='tableLayoutPanel1']/text[@controlname='passwordTextbox']/text[@accessiblerole='Text']", 30000, null, "760aca35-edaa-457c-80e3-f1c2facc7ef0");
+                _connectbuttonInfo = new RepoItemInfo(this, "ConnectButton", "button[@controlname='connectButton']", 30000, null, "e1850cb0-9ae2-477a-8e4b-4fe290ab7a5a");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("045423ee-b2db-4e1b-9c8a-6f1ff05a9a01")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("045423ee-b2db-4e1b-9c8a-6f1ff05a9a01")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The AuthenticationDropDownList item.
+            /// </summary>
+            [RepositoryItem("dc9cff80-6ea0-4c96-b2c2-4485849f86c2")]
+            public virtual Ranorex.ComboBox AuthenticationDropDownList
+            {
+                get
+                {
+                    return _authenticationdropdownlistInfo.CreateAdapter<Ranorex.ComboBox>(true);
+                }
+            }
+
+            /// <summary>
+            /// The AuthenticationDropDownList item info.
+            /// </summary>
+            [RepositoryItemInfo("dc9cff80-6ea0-4c96-b2c2-4485849f86c2")]
+            public virtual RepoItemInfo AuthenticationDropDownListInfo
+            {
+                get
+                {
+                    return _authenticationdropdownlistInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Username item.
+            /// </summary>
+            [RepositoryItem("5eeaae31-fd4d-4fbd-ac6c-515bb447de4b")]
+            public virtual Ranorex.Text Username
+            {
+                get
+                {
+                    return _usernameInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Username item info.
+            /// </summary>
+            [RepositoryItemInfo("5eeaae31-fd4d-4fbd-ac6c-515bb447de4b")]
+            public virtual RepoItemInfo UsernameInfo
+            {
+                get
+                {
+                    return _usernameInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Password item.
+            /// </summary>
+            [RepositoryItem("760aca35-edaa-457c-80e3-f1c2facc7ef0")]
+            public virtual Ranorex.Text Password
+            {
+                get
+                {
+                    return _passwordInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Password item info.
+            /// </summary>
+            [RepositoryItemInfo("760aca35-edaa-457c-80e3-f1c2facc7ef0")]
+            public virtual RepoItemInfo PasswordInfo
+            {
+                get
+                {
+                    return _passwordInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ConnectButton item.
+            /// </summary>
+            [RepositoryItem("e1850cb0-9ae2-477a-8e4b-4fe290ab7a5a")]
+            public virtual Ranorex.Button ConnectButton
+            {
+                get
+                {
+                    return _connectbuttonInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ConnectButton item info.
+            /// </summary>
+            [RepositoryItemInfo("e1850cb0-9ae2-477a-8e4b-4fe290ab7a5a")]
+            public virtual RepoItemInfo ConnectButtonInfo
+            {
+                get
+                {
+                    return _connectbuttonInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The List1000AppFolder folder.
+        /// </summary>
+        [RepositoryFolder("97290bd8-21d4-4e4f-88b1-a8cf119886e4")]
+        public partial class List1000AppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _sqlserverauthenticationInfo;
+
+            /// <summary>
+            /// Creates a new List1000  folder.
+            /// </summary>
+            public List1000AppFolder(RepoGenBaseFolder parentFolder) :
+                    base("List1000", "/list[@controlid='1000']", parentFolder, 30000, null, true, "97290bd8-21d4-4e4f-88b1-a8cf119886e4", "")
+            {
+                _sqlserverauthenticationInfo = new RepoItemInfo(this, "SQLServerAuthentication", "listitem[@text='SQL Server Authentication']", 30000, null, "171bc8d2-a90c-447c-9463-c01be5ff98ac");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("97290bd8-21d4-4e4f-88b1-a8cf119886e4")]
+            public virtual Ranorex.List Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.List>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("97290bd8-21d4-4e4f-88b1-a8cf119886e4")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SQLServerAuthentication item.
+            /// </summary>
+            [RepositoryItem("171bc8d2-a90c-447c-9463-c01be5ff98ac")]
+            public virtual Ranorex.ListItem SQLServerAuthentication
+            {
+                get
+                {
+                    return _sqlserverauthenticationInfo.CreateAdapter<Ranorex.ListItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SQLServerAuthentication item info.
+            /// </summary>
+            [RepositoryItemInfo("171bc8d2-a90c-447c-9463-c01be5ff98ac")]
+            public virtual RepoItemInfo SQLServerAuthenticationInfo
+            {
+                get
+                {
+                    return _sqlserverauthenticationInfo;
                 }
             }
         }
