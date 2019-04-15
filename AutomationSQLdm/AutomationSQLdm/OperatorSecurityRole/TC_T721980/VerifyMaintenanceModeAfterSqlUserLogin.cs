@@ -37,39 +37,40 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721980
         {
         	try 
         	{
-        	  Steps.ClickAdministration();
-        	  Steps.ClickApplicationSecurity();
-        	  Steps.ClickEnableSecurity();
-        	  Steps.AcceptExceptionMessage();
-        	  Steps.ClickToAddUsers();
-        	  Steps.ClickNextButton();
-        	  Steps.EnterDomianUserName(Constants.NewSqlUser);
-        	  Steps.SelectSqlAuthentication();
-        	  Steps.ClickNextButton();
-        	  Steps.ClickOptionBtn_ViewDataAcknowledgwAlarm();
-        	  Steps.ClickNextButton();
-        	  Steps.SelectServers();
-        	  Steps.ClickAddButton();
-        	  Steps.ClickNextButton();
-        	  Steps.ClickFinishButton();
-        	  Steps.VerifySqlUserAdded();
-        	  
-        	  //Login DM with SQL
-        	  Steps.ConnectDMRepo();
+//        	  Steps.ClickAdministration();
+//        	  Steps.ClickApplicationSecurity();
+//        	  Steps.ClickEnableSecurity();
+//        	  Steps.AcceptExceptionMessage();
+//        	  Steps.ClickToAddUsers();
+//        	  Steps.ClickNextButton();
+//        	  Steps.EnterDomianUserName(Constants.NewSqlUser);
+//        	  Steps.SelectSqlAuthentication();
+//        	  Steps.ClickNextButton();
+//        	  Steps.ClickOptionBtn_ViewDataAcknowledgwAlarm();
+//        	  Steps.ClickNextButton();
+//        	  Steps.SelectServers();
+//        	  Steps.ClickAddButton();
+//        	  Steps.ClickNextButton();
+//        	  Steps.ClickFinishButton();
+//        	  Steps.VerifySqlUserAdded();
+//        	  
+//        	  //Login DM with SQL
+//        	  Steps.ConnectDMRepo();
         	   
         	  AutomationSQLdm.Grooming_Modifications.Steps.ClickOnTools();
-        	  Steps.SelectSnoozeAlertMenuItem(); // will create  for maintaince mode
+//        	  //////////Steps.SelectSnoozeAlertMenuItem(); // will create  for maintaince mode
         	  Steps.SelectMaintainceModeMenuItem();
-//        	  AutomationSQLdm.Grooming_Modifications.Steps.ClickOnTools(); //uncomment it will required here.
-//        	  Steps.VerifySnoozeAlertApplied(); //  will create  for maintaince mode
-        	
-        	// will delete the below code , kept just for reference
-//			  Steps.ClickServersInLeftPane();
-//			  Steps.RightClickMonitoredServer();
-//        	  Steps.ClickMaintainceModeContextMenu();
-        	  Steps.VerifyMaintainceModeContextMenuItems();
-//        	  Steps.EnableMaintainceMode();
-//        	  Steps.VerifyMaintainceModeIsChanged();
+        	  Steps.VerifyMaintainceModeMenuItems_test();
+//        	  AutomationSQLdm.Grooming_Modifications.Steps.ClickOnTools(); 
+//        	  Steps.VerifyMaintainceModeIsChanged(); //  will create  for maintaince mode
+//        	
+//        	// will delete the below code , kept just for reference
+////			  Steps.ClickServersInLeftPane();
+////			  Steps.RightClickMonitoredServer();
+////        	  Steps.ClickMaintainceModeContextMenu();
+//        	  Steps.VerifyMaintainceModeContextMenuItems();
+////        	  Steps.EnableMaintainceMode();
+////        	  Steps.VerifyMaintainceModeIsChanged();
         	} 
         	catch (Exception ex)
         	{

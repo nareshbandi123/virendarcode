@@ -58,12 +58,18 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721983
         	  Steps.VerifyMaintainceModeContextMenuItems();
         	  Steps.EnableMaintainceMode();
         	  Steps.VerifyMaintainceModeIsChanged();
-        	  
         	} 
         	catch (Exception ex)
         	{
         		Validate.Fail(ex.Message);
         	}
+        	finally
+        	{
+        		Steps.ClickAdministration();
+        		Steps.ClickWindowsUserToDelete();
+        	    Steps.DeleteAddedUser();
+        	} 
+        	
         	return true;
         }
         

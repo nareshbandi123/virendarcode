@@ -61,6 +61,12 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721994
         	{
         		Validate.Fail(ex.Message);
         	}
+        	finally
+        	{
+        		Steps.ClickAdministration();
+        		Steps.ClickWindowsUserToDelete();
+        	    Steps.DeleteAddedUser();
+        	} 
         	return true;
         }
         

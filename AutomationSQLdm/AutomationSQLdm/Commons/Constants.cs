@@ -12,6 +12,7 @@ namespace AutomationSQLdm.Commons
 		public const string RepositoryInfo_ColName = "Internal_Value";
 		public const string WindowsUser = "WindowsUser";
 		public const string SqlUser = "SqlUser";
+		public const string strAdministrator = "Administrator";
 		//{"GroomForecasting", "AggregateForecasting", "GroomPrescriptiveAnalysis","GroomQueryAggregation","GroomAlerts","GroomMetrics"};
 
 #region SQLDM Constants

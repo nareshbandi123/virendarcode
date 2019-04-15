@@ -120,6 +120,41 @@ rxversion="8.2">
 			searchtimeout="30000ms">
 				/form[@controlname='GroomingOptionsDialog']//container[@controlname='tableLayoutPanel4']/container[@controltypename='NumericUpDown' and @instance='5']/text[@controlname='upDownEdit']
 			</item>
+			<item
+			addcaps="text,accessible"
+			capname="text"
+			id="1c880ec9-e930-4ccc-ace1-fd289843f3a2"
+			name="GroomingOnceDailyAt"
+			refimgid="27cbaf99-ceb5-41db-afe9-1c139728674d"
+			searchtimeout="30000ms">
+				/form[@controlname='GroomingOptionsDialog']//container[@controlname='containerPanel']//container[@controlname='groupBox1']//combobox//text[@accessiblename='Text area']
+			</item>
+			<item
+			capname="text"
+			id="0b029e11-c7a7-423e-a20e-586adb6c05cf"
+			name="AggregaionOnceDailyAt"
+			searchtimeout="30000ms">
+				/form[@controlname='GroomingOptionsDialog']//container[@controlname='containerPanel']//container[@controlname='groupBox2']//combobox//text[@accessiblename='Text area']
+			</item>
+			<item
+			addcaps="text,control,nativewindow"
+			capname="text"
+			id="8d4e12ef-38a7-4191-8a37-9ebf6461b612"
+			name="GroomSessionsQueries"
+			refimgid="20a0bb51-6b88-439e-b5b0-27145e869ff4"
+			refpath="/form[@controlname='GroomingOptionsDialog']/container[@controlname='containerPanel']/container[@controlname='tableLayoutPanel3']/container[@controlname='tableLayoutPanel4']/container[@controlname='activityGroomingThresholdNumericUpDown']/text[@controlname='upDownEdit']"
+			searchtimeout="30000ms">
+				/form[@controlname='GroomingOptionsDialog']//container[@controlname='tableLayoutPanel4']/container[@controlname='activityGroomingThresholdNumericUpDown']/text[@controlname='upDownEdit']
+			</item>
+			<item
+			addcaps="text,control,nativewindow"
+			capname="text"
+			id="ee387910-4f33-4868-8ab2-40e6f12661af"
+			name="GroomChangeLog"
+			refimgid="0148066c-8b67-40d9-a452-e873da6a2eb4"
+			searchtimeout="30000ms">
+				/form[@controlname='GroomingOptionsDialog']//container[@controlname='tableLayoutPanel4']/container[@controltypename='NumericUpDown' and @instance='4']/text[@controlname='upDownEdit']
+			</item>
 			<basepath>
 				/form[@controlname='GroomingOptionsDialog']
 			</basepath>

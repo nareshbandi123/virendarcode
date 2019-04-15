@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="2e6868386c65ac2"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="0"
+		totalblockedtestcasecount="0"
+		childsuccesscount="0"
+		childfailedcount="0"
+		childblockedcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		totalmaintenancemodecount="0"
+		user="administrator"
+		rxversion="8.2.1.0"
+		host="CIGNITI-W12R2-1"
+		osversion="Windows Server 2012 R2 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="en-US"
+		dtnlanguage="en-US"
+		screenresolution="1366x768"
+		timestamp="4/12/2019 3:25:09 AM"
+		timestampiso="2019-04-12T10:25:09"
+		endtime="4/12/2019 3:25:26 AM"
+		timeoutfactor="1"
+		module="VerifySnoozeAlertsForFewMinutesForSqlUser">
+		<detail>
+			VerifySnoozeAlertsForFewMinutesForSqlUser
+		</detail>
+		<errormessage>
+			Value cannot be null.
+Parameter name: category
+		</errormessage>
+		<varbindings>
+		</varbindings>
+		<item
+			timeRelativeToTestSuiteStartTime="00:16.610"
+			timeRelativeToTestModuleStartTime="00:16.612"
+			timeWallClock="03:25:26"
+			time="00:16.610"
+			level="Error"
+			category="Module"
+			errimg=".\AbleToSa_cb5304f0_1c065a42_trace.jpg"
+			errthumb=".\AbleToSa_cb5304f0_1c065a42_trace_thumb.jpg">
+			<message>
+				Value cannot be null.<br/>Parameter name: category
+			</message>
+			<metainfo
+				stacktrace="   at Ranorex.Report.Log(ReportLevel level, String category, String message, Boolean escape, IReportMetadata[] metaData)
+   at Ranorex.Report.Log(ReportLevel level, String category, String message)
+   at Ranorex.Report.Failure(String category, String message)
+   at AutomationSQLdm.Commons.Reports.ReportLog(String log, SQLdmReportLevel reportlevel, Element element, String category) in D:\repos\virendarcode\AutomationSQLdm\AutomationSQLdm\Commons\Reports.cs:line 21
+   at AutomationSQLdm.OperatorSecurityRole.TC_T721988.VerifySnoozeAlertsForFewMinutesForSqlUser.StartProcess() in D:\repos\virendarcode\AutomationSQLdm\AutomationSQLdm\OperatorSecurityRole\TC_T721988\AbleToSaveUserWithNewPermission.cs:line 64
+   at AutomationSQLdm.OperatorSecurityRole.TC_T721988.VerifySnoozeAlertsForFewMinutesForSqlUser.Ranorex.Core.Testing.ITestModule.Run() in D:\repos\virendarcode\AutomationSQLdm\AutomationSQLdm\OperatorSecurityRole\TC_T721988\AbleToSaveUserWithNewPermission.cs:line 34
+   at Ranorex.Core.Testing.TestModuleLeaf.RunInternal(DataContext parentDataContext, Int32 iteration, Int32 iterationCount, Boolean skipIteration)"
+				codefile="D:\repos\virendarcode\AutomationSQLdm\AutomationSQLdm\Commons\Reports.cs"
+				codeline="21"
+				loglvl="Error">
+			</metainfo>
+		</item>
+	</activity>
+</report>

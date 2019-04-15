@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Collections;
+using System.Configuration;
 using System.Drawing;
 using System.Text;
-using AutomationSQLdm.Extensions;
+
 using AutomationSQLdm.Commons;
-using Ranorex.Core;
-using Ranorex;
-using System.Configuration;
 using AutomationSQLdm.Configuration;
+using AutomationSQLdm.Extensions;
+using Ranorex;
+using Ranorex.Core;
+using System.Threading;
 
 namespace AutomationSQLdm.OperatorSecurityRole
 {
@@ -18,6 +21,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		public static OperatorSecurityRoleRepo repo = OperatorSecurityRoleRepo.Instance;
 		public const string SNOOZEALERT_MENU = @"/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@automationid='snoozeAllAlertsToolMenu']";
 		public const string MAINTAINANCEMODE_MENU = @"/contextmenu[@processname='SQLdmDesktopClient']/menuitem[@automationid='MaintenanceModeButtonKey']";
+		public static int rownum = 0;
 		
 		public static void SelectSnoozeAlertMenuItem()
 		{ 
@@ -76,6 +80,21 @@ namespace AutomationSQLdm.OperatorSecurityRole
 					Validate.Fail("No Server Found. Please Add Server.");
 				}
 				
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : RightClickMonitoredServer :" + ex.Message);
+			}
+		}
+		
+		public static void RightClickAllServer()
+		{ 
+			try
+			{
+				var allServers = repo.Application.AllServers;
+				Report.Info(allServers.Items.Count.ToString());
+				allServers.Click(System.Windows.Forms.MouseButtons.Right);
+				Reports.ReportLog("Right Clicked All Server ", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 			}
 			catch (Exception ex)
 			{
@@ -153,6 +172,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{ 
 			try
 			{
+				Thread.Sleep(120000);
 				RightClickMonitoredServer();
         	    ClickMaintainceModeContextMenu();
         	    
@@ -201,6 +221,27 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			{
 				throw new Exception("Failed : VerifyMaintainceModeContextMenuItems :" + ex.Message);
 			}
+		}
+		
+		public static void Cell_test()
+		{ 
+			var cell = Host.Local.FindSingle<Ranorex.Cell>(@"/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//table[@accessiblename~'^\ \ \ \ \ \ \ System\ logins,\ whi']//cell[@accessiblevalue='sa1']");
+            cell.DoubleClick();
+		}
+		
+		public static void VerifyMaintainceModeMenuItems_test()
+		{ 
+            var menuitems = Host.Local.Find<Ranorex.MenuItem>("/contextmenu[@win32ownerwindowlevel='2']/menuitem");
+          
+			if (menuitems != null) {
+				foreach (var mitem in menuitems)  
+			    {
+					//if(mitem.Text.Equals(""))
+			        Report.Info(mitem.Text + mitem.Enabled);           
+			    }    
+				Report.Info(menuitems.Count.ToString());
+			}
+			
 		}
 		
 		public static void VerifyMaintainceModeMenuItems()
@@ -503,11 +544,41 @@ namespace AutomationSQLdm.OperatorSecurityRole
 			}
 		}
 		
+		public static void VerifyUserAdded(string userType)
+		{
+			try
+			{
+				string user = null;
+				if(userType.ToLower().Equals(Constants.NewSqlUser.ToLower()))
+					user = Constants.NewSqlUser;
+				else
+					user = Constants.NewWindowsUser;
+				
+				var cell = Host.Local.FindSingle<Ranorex.Cell>(@"/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//table[@accessiblename~'^\ \ \ \ \ \ \ System\ logins,\ whi']//cell[@accessiblevalue='"+ user +"']");
+
+				if(cell != null)
+				{
+					cell.Click();
+					Reports.ReportLog("New User Added Successfully ! " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+				}
+				else
+				{
+					Reports.ReportLog("New User not Added : ", Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
+					Validate.Fail("New User not Added Successfully");
+				}
+			
+			}
+			catch(Exception ex)
+			{
+				throw new Exception("Failed : VerifySqlUserAdded : " + ex.Message);
+			}
+		}
+		
 		public static void VerifySqlUserAdded()
 		{
 			try
 			{
-				if(repo.Application.NewSqlUserAddedInfo.Exists())
+				if(repo.NewSqlUserAddedInfo.Exists())
 				{
 					Reports.ReportLog("New User Added Successfully ! " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 				}
@@ -516,12 +587,99 @@ namespace AutomationSQLdm.OperatorSecurityRole
 					Reports.ReportLog("New User not Added : ", Reports.SQLdmReportLevel.Info, null, Configuration.Config.TestCaseName);
 					Validate.Fail("New User not Added Successfully");
 				}
+			
 			}
 			catch(Exception ex)
 			{
 				throw new Exception("Failed : VerifySqlUserAdded : " + ex.Message);
 			}
 		}
+
+		public static void EditUserInUserTable(string userType)
+		{
+			try
+			{
+				Ranorex.Cell cellUser= null;
+				if (userType.ToLower() == "sqluser")
+					cellUser = repo.Application.TableSystemLoginsWhichBelong.FindSingle("//cell[@accessiblevalue='"+ Constants.NewSqlUser +"']");
+				else
+					cellUser = repo.Application.TableSystemLoginsWhichBelong.FindSingle("//cell[@accessiblevalue='"+ Constants.NewWindowsUser +"']");
+				cellUser.MoveTo();
+				//Thread.Sleep(2000);
+				cellUser.Click();
+				//Thread.Sleep(2000);
+				cellUser.DoubleClick();
+				Reports.ReportLog("Opened User in Edit mode Successfully ! " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+			}
+			catch(Exception ex)
+			{
+				throw new Exception("Failed : EditUserInUserTable : " + ex.Message);
+			}
+		}
+		
+		public static void ChangePermission(string userType)
+		{
+			try
+			{
+				EditUserInUserTable(userType);
+				repo.PermissionPropertyDialog.RadioButtonGeneralRdBtnAdministrator.MoveTo();
+				repo.PermissionPropertyDialog.RadioButtonGeneralRdBtnAdministrator.Click();
+				repo.PermissionPropertyDialog.ButtonBtnOK.MoveTo();
+				repo.PermissionPropertyDialog.ButtonBtnOK.ClickThis();
+				Reports.ReportLog("Permission Changed to Administrator Powers in Sql DM" , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+			}
+			catch(Exception ex)
+			{
+				throw new Exception("Failed : ChangePermission : " + ex.Message);
+			}
+		}
+		
+		
+		
+		public static void VerifyPermissionChanged()
+		{
+			bool IsFound = false;
+			try
+			{
+				var tableSystemLoginsWhichBelong = repo.Application.TableSystemLoginsWhichBelong;
+				foreach(var row in tableSystemLoginsWhichBelong.Rows)
+				{
+					if(row.Cells[3].Text.ToLower().Equals(Constants.NewSqlUser.ToLower()))
+					{
+						if(row.Cells[5].Text.ToLower().Equals(Constants.strAdministrator.ToLower()))
+						{
+							IsFound = true;
+							break;
+						}
+					}
+				}
+				if(IsFound)
+					Reports.ReportLog("Permission Changed to Administrator Powers in Sql DM " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+				else
+					Validate.Fail("Permission Not Changed to Administrator Powers in Sql DM");
+			}
+			catch(Exception ex)
+			{
+				throw new Exception("Failed : ChangePermission : " + ex.Message);
+			}
+		}
+		
+//		public static void VerifyPermissionChanged()
+//		{
+//			try
+//			{
+//				
+//				repo.PermissionPropertiesSIMPSONSAdminis.AdministratorPowersInSQLDiagnosticM.Click();
+//				repo.PermissionPropertiesSIMPSONSAdminis.ButtonOK.ClickThis();
+//				Reports.ReportLog("Permission Changed to 'Administrator Powers in Sql DM' " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
+//			}
+//			catch(Exception ex)
+//			{
+//				throw new Exception("Failed : ChangePermission : " + ex.Message);
+//			}
+//		}
+		
+		
 			
 		public static void VerifyViewDataAcknowledgwAlarmIsSelected(string userType)
 		{
@@ -531,11 +689,10 @@ namespace AutomationSQLdm.OperatorSecurityRole
 				if(userType.Equals("WindowsUser")) 
 					repo.Application.NewWindowsUserAdded.DoubleClick();
 				else 
-					repo.Application.NewSqlUserAdded.DoubleClick();
+					repo.NewSqlUserAdded.DoubleClick();
 				if(repo.PermissionPropertyDialog.ViewDataAcknowledgwAlarm.Checked)
 				{
 					Reports.ReportLog("ViewDataAcknowledgwAlarm Option is Selected " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
-					
 				}
 				else
 				{
@@ -579,7 +736,7 @@ namespace AutomationSQLdm.OperatorSecurityRole
 		{
 			try
 			{
-				repo.Application.NewSqlUserAdded.Click();
+				repo.NewSqlUserAdded.Click();
 				Reports.ReportLog("Clicked New SqlUser Added " , Reports.SQLdmReportLevel.Success, null, Configuration.Config.TestCaseName);
 			}
 			catch(Exception ex)

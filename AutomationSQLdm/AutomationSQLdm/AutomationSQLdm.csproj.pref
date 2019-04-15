@@ -3,15 +3,38 @@
     <Element value="AutomationSQLdm.rxtst" />
   </Array>
   <Array name="bookmarks">
-    <Element value="Breakpoint|D:\repos\virendarcode\AutomationSQLdm\AutomationSQLdm\OperatorSecurityRole\Steps.cs|173|5|True|Break||" />
-    <Element value="Breakpoint|D:\repos\virendarcode\AutomationSQLdm\AutomationSQLdm\OperatorSecurityRole\Steps.cs|172|5|True|Break||" />
+    <Element value="Breakpoint|D:\repos\virendarcode\AutomationSQLdm\AutomationSQLdm\Commons\Common.cs|45|17|True|Break||" />
+    <Element value="Breakpoint|D:\repos\virendarcode\AutomationSQLdm\AutomationSQLdm\Commons\Common.cs|46|17|True|Break||" />
+    <Element value="Breakpoint|D:\repos\virendarcode\AutomationSQLdm\AutomationSQLdm\Extensions\Extension.cs|154|9|True|Break||" />
+    <Element value="Breakpoint|D:\repos\virendarcode\AutomationSQLdm\AutomationSQLdm\Commons\Common.cs|39|5|True|Break||" />
+    <Element value="Breakpoint|D:\repos\virendarcode\AutomationSQLdm\AutomationSQLdm\BVT\Steps.cs|150|5|True|Break||" />
   </Array>
   <Array name="files">
-    <Element value="AutomationSQLdm.rxtst" />
-    <Element value="OperatorSecurityRole\TC_T721992\VerifySnoozeAlertsForFewMinutesForSqlUser.cs" />
+    <Element value="OperatorSecurityRole\TC_T721988\AbleToSaveUserWithNewPermission.cs" />
     <Element value="OperatorSecurityRole\Steps.cs" />
+    <Element value="OperatorSecurityRole\TC_T721974\AddingWindowsUserToSecurityRole.cs" />
+    <Element value="app.config" />
+    <Element value="AutomationSQLdm.rxtst" />
+    <Element value="Commons\Constants.cs" />
+    <Element value="OperatorSecurityRole\OperatorSecurityRoleRepo.rxrep" />
+    <Element value="OperatorSecurityRole\TC_T721975\AddingSqlUserToSecurityRole.cs" />
+    <Element value="OperatorSecurityRole\TC_T721993\VerifyMaintenanceModeForSqlUser.cs" />
+    <Element value="AutomationSQLdmRepository.rxrep" />
+    <Element value="OperatorSecurityRole\TC_T721976\VerifyViewDataAcknowledgeWindowsUser.cs" />
+    <Element value="OperatorSecurityRole\TC_T721980\VerifyMaintenanceModeAfterSqlUserLogin.cs" />
     <Element value="OperatorSecurityRole\TC_T721981\VerifySnoozeAlertsForFewMinutesForWindowsUser.cs" />
     <Element value="OperatorSecurityRole\TC_T721982\VerifySnoozeAlertsFor10MinutesForWindowsUser.cs" />
+    <Element value="OperatorSecurityRole\TC_T721983\VerifyMaintenanceModeForWindowsUser.cs" />
+    <Element value="OperatorSecurityRole\TC_T721987\VerifysSheduleOptionNotAppearFromServerRightClickView.cs" />
+    <Element value="OperatorSecurityRole\TC_T721992\VerifySnoozeAlertsForFewMinutesForSqlUser.cs" />
+    <Element value="Grooming Modifications\TC_721943\VerifyAggregateForecastingData.cs" />
+    <Element value="OperatorSecurityRole\TC_T721994\VerifySnoozeAlertsForFewMinutesForWindowsUser.cs" />
+    <Element value="OperatorSecurityRole\TC_T721989\VerifyMaintenanceModeForAllServersForWindowsUser.cs" />
+    <Element value="BVT\TC_T722131\VerifySQLdmUserCanEnableWMIcollectionOption.cs" />
+    <Element value="Grooming Modifications\GroomingRepo.rxrep" />
+    <Element value="Grooming Modifications\TC_21960\VerifyValuesInRepositoryTable.cs" />
+    <Element value="BVT\Steps.cs" />
+    <Element value="BVT\Recording1.rxrec" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

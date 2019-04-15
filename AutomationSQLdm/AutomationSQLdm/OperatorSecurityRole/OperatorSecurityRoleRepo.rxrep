@@ -13,6 +13,15 @@ rxversion="8.2">
 	name="Root"
 	searchtimeout="0ms"
 	usecache="True">
+		<item
+		addcaps="cell,accessible"
+		capname="cell"
+		id="172570af-8ff7-4fe3-85cb-8980091f5933"
+		name="NewSqlUserAdded"
+		refimgid="d0209644-d165-4c3b-b528-f7db475fdd15"
+		searchtimeout="30000ms">
+			/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//table[@accessiblename~'^\ \ \ \ \ \ \ System\ logins,\ whi']//cell[@accessiblevalue='sa1']
+		</item>
 		<appfolder
 		capname="form"
 		id="1a73f651-c755-42fc-8b6e-622d9bbcf5f6"
@@ -73,15 +82,6 @@ rxversion="8.2">
 				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//toolbar[@accessiblename='Permissions']/button[@accessiblename='Delete']
 			</item>
 			<item
-			addcaps="cell,accessible"
-			capname="cell"
-			id="172570af-8ff7-4fe3-85cb-8980091f5933"
-			name="NewSqlUserAdded"
-			refimgid="d0209644-d165-4c3b-b528-f7db475fdd15"
-			searchtimeout="30000ms">
-				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//table[@accessiblename~'^\ \ \ \ \ \ \ System\ logins,\ whi']//cell[@accessiblevalue='sa1']
-			</item>
-			<item
 			addcaps="treeitem,accessible,accessibletreeitem"
 			capname="treeitem"
 			id="5f08e6b7-a10a-4f65-9e1c-fe874145609f"
@@ -137,6 +137,24 @@ rxversion="8.2">
 			refpath="/form[@title='Idera SQL diagnostic manager - SQLdmRepository (CIGNITI-W12R2-1\SQL2016)']/statusbar[@automationid='statusBar']/picture[@automationid='PART_WindowIcon']/text[@automationid='CaptionText']"
 			searchtimeout="30000ms">
 				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/?/?/picture[@automationid='PART_WindowIcon']/text[@automationid='CaptionText']
+			</item>
+			<item
+			addcaps="table,accessible"
+			capname="table"
+			id="cb238cd7-46cb-49a4-81f3-ceef621a6e25"
+			name="TableSystemLoginsWhichBelong"
+			refimgid="28a9a080-22a5-440c-a6b7-a471ce727db3"
+			searchtimeout="30000ms">
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//table[@accessiblename~'^\ \ \ \ \ \ \ System\ logins,\ whi']
+			</item>
+			<item
+			addcaps="button,accessible"
+			capname="button"
+			id="965078cf-6fc7-4da7-960d-71de4dcb2267"
+			name="btnEdit"
+			refimgid="e0d78706-4642-4c2f-bacc-afe37fee8738"
+			searchtimeout="30000ms">
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']//container[@accessiblename='Home']/toolbar[@accessiblename='Permissions']/button[@accessiblename='Edit']
 			</item>
 			<basepath>
 				/form[@title~'^Idera\ SQL\ diagnostic\ mana']
@@ -275,6 +293,26 @@ XrLp0EM2aG+RntUiB+ZT6fxfIsRPbYnQgbXhGFYAAAAASUVORK5CYII=
 			name="ViewDataAcknowledgwAlarm"
 			searchtimeout="30000ms">
 				/form[@controlname='PermissionPropertyDialog']//container[@controlname='_generalPropertyPage']//radiobutton[@controlname='_generalRdBtnReadOnlyPlus']
+			</item>
+			<item
+			addcaps="radiobutton,control,nativewindow"
+			capname="radiobutton"
+			id="a7b7cdaa-8804-4a7c-b10d-1f1acd74b07c"
+			name="RadioButtonGeneralRdBtnAdministrator"
+			refimgid="ca1748e6-3c55-4998-8997-d74561792b0c"
+			refpath="/form[@controlname='PermissionPropertyDialog']/element[@controlname='_tabControl']/container[@controlname='ultraTabPageControl2']/container[@controlname='_generalPropertyPage']/container[@controlname='backgroundPanel']/container[@controlname='ContentPanel']/container[@controlname='mainContainerPanel']/radiobutton[@controlname='_generalRdBtnAdministrator']"
+			searchtimeout="30000ms">
+				/form[@controlname='PermissionPropertyDialog']/element[@controlname='_tabControl']/container[@controlname='ultraTabPageControl2']/container[@controlname='_generalPropertyPage']//radiobutton[@controlname='_generalRdBtnAdministrator']
+			</item>
+			<item
+			addcaps="button,control,nativewindow"
+			capname="button"
+			id="b01262fb-51c2-47b0-bf48-5cd728649ee8"
+			name="ButtonBtnOK"
+			refimgid="270c3282-5876-48a2-a01c-84153bf1a08c"
+			refpath="/form[@controlname='PermissionPropertyDialog']/button[@controlname='_btnOK']"
+			searchtimeout="30000ms">
+				/form[@controlname='PermissionPropertyDialog']/button[@controlname='_btnOK']
 			</item>
 			<basepath>
 				/form[@controlname='PermissionPropertyDialog']
@@ -647,6 +685,53 @@ DsQBlSsOGwAAAKlJREFUOE9j+P//P0WYYc/Rq/+3Hbj4f+Pu80A+QgKXOAgjizNs3nsBxPhv6pkM
 xiBBEMYnDmIcOHAALM6watspkCQYICvEL84A5oANWLz+KJgBwzCFuMRBGFkMLkguZmicuOp/UfO8
 /+lVU8EYJkGsOIpp5GCsgqRgMEFqOkDGGPEKk8CVDtAxRrzCJHClA3QMJrDZgi8dIGOsgqRgktMB
 OsYqSDz+zwAAaK/nDj2T/r4AAAAASUVORK5CYII=
+			</icon>
+		</appfolder>
+		<appfolder
+		addcaps="form,nativewindow"
+		capname="form"
+		id="3723efb4-a297-440a-9e98-5e9e54563314"
+		isrooted="True"
+		name="PermissionPropertiesSIMPSONSAdminis"
+		refpath="/form[@title='Permission Properties - SIMPSONS\administrator1 ']"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			addcaps="radiobutton,accessible"
+			capname="radiobutton"
+			id="d30b7d54-d0ba-4b88-9aa7-ff4eeeeef9ea"
+			name="AdministratorPowersInSQLDiagnosticM"
+			refimgid="307b1e7c-a521-4138-8172-a31f60abc6e7"
+			searchtimeout="30000ms">
+				/form[@title~'^Permission\ Properties\ -\ S']//radiobutton[@accessiblename~'^Administrator\ powers\ in\ S']
+			</item>
+			<item
+			addcaps="button,accessible"
+			capname="button"
+			id="fdc322bf-393b-4f83-87d5-1bde5f57b5a0"
+			name="ButtonOK"
+			refimgid="1a707e08-4ae0-45f4-b81b-e3bd7171c28c"
+			refpath="/form[@title='Permission Properties - SIMPSONS\administrator1 ']/element[@class='WindowsForms10.BUTTON.app.0.3ce0bb8_r12_ad1' and @instance='0']/button[@accessiblename='OK']"
+			searchtimeout="30000ms">
+				/form[@title~'^Permission\ Properties\ -\ S']/?/?/button[@accessiblename='OK']
+			</item>
+			<basepath>
+				/form[@title~'^Permission\ Properties\ -\ S']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlz
+AAAOxAAADsQBlSsOGwAAAlFJREFUOE+lk+tLk2EYh/eX9CGipCIyCKLo4HHlzA8SVoR9KogkkKDM
+CKRCCwQtKUjtIJSdrKggqQ+CFZmHHGlzzrU552HqNnWbO7zHXT3bBLXQoG74fXvv63c9z8tj+O9p
+aDFz55WDmuYBqpp+cLnRzJnqTk5UdlNc8YWic60Ulr6koOTJshw8/RjjkXIMdc9tNLVrNLZp3GqV
+qX4dofJZkIpHs5Q3+Tl710fJ7UlO1o5zvNrN0SoXh644yS8zsyZtB4baZjN1bwLcfBvm4oMpTt1w
+U3zdybFrDg5ftVNYYaPg0iCmcisHLgxgLLOQe95CRmk369KNGGoaXuAPxAhHNeZFQhGVYFghIDIb
+SsUbUPDMyLi9Mg6PhHVMosvqYePW7QJQ38JqE4+DokJEijMX0ZkKaoz6VSwuLxs2b8Nw/+n7hU//
+HE0HSYkzH9OZmdeYnNNw+xR+Tir0DP0FoItmWSwnm8M606J5TDQ7pxSs4zKd1tUACW1NLMtxglEd
+X0hjYlbD5VWwTSj0j8h8tgjAphUAi+pxZsRySl3FLtQtozK9wxLtfSsAkupqQl1PqQdS6o6kusJ3
+l0yXQ6LNnACkLwckb1yDqDh3YKn6dEq9zy3R45TosMX40PsbQOyiLqiHhLo/eesqIwl1z6L6V3uM
+T9Yo73q8rE8A7i0xEOVI4p+HYggATMyByxdnyKPRP6rxbVilw67wcVBOAtambRFvof4hufvzyTGa
+yBbJEskUycg1sS/HxN7sPPaI7M7KY1dmKjszUsnJL2LhTf7rGAy/AP7X5rYY5FLEAAAAAElFTkSu
+QmCC
 			</icon>
 		</appfolder>
 		<basepath>

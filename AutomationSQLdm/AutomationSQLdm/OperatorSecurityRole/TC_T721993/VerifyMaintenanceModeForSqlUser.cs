@@ -12,7 +12,7 @@ using Ranorex.Core.Testing;
 using AutomationSQLdm.Base;
 using AutomationSQLdm.Commons;
 
-namespace AutomationSQLdm.OperatorSecurityRole.New_folder
+namespace AutomationSQLdm.OperatorSecurityRole.TC_T721993
 {
     /// <summary>
     /// Description of VerifyMaintenanceModeForSqlUser.
@@ -64,6 +64,12 @@ namespace AutomationSQLdm.OperatorSecurityRole.New_folder
         	{
         		Validate.Fail(ex.Message);
         	}
+        	finally
+        	{
+        		Steps.ClickAdministration();
+        		Steps.ClickSqlUserToDelete();
+        	    Steps.DeleteAddedUser();
+        	} 
         	return true;
         }
         

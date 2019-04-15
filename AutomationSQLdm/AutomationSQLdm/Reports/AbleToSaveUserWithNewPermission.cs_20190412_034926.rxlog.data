@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Failed"
+		duration="1.4m"
+		durationms="82291"
+		type="root"
+		rid="45cfbed0d4c98"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="0"
+		totalblockedtestcasecount="0"
+		childsuccesscount="0"
+		childfailedcount="0"
+		childblockedcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		totalmaintenancemodecount="0"
+		user="administrator"
+		rxversion="8.2.1.0"
+		host="CIGNITI-W12R2-1"
+		osversion="Windows Server 2012 R2 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="en-US"
+		dtnlanguage="en-US"
+		screenresolution="1366x768"
+		timestamp="4/12/2019 3:49:30 AM"
+		timestampiso="2019-04-12T10:49:30"
+		endtime="4/12/2019 3:50:52 AM"
+		timeoutfactor="1"
+		module="VerifySnoozeAlertsForFewMinutesForSqlUser">
+		<detail>
+			VerifySnoozeAlertsForFewMinutesForSqlUser
+		</detail>
+		<varbindings>
+		</varbindings>
+		<item
+			timeRelativeToTestSuiteStartTime="01:22.289"
+			timeRelativeToTestModuleStartTime="01:22.293"
+			timeWallClock="03:50:52"
+			time="01:22.289"
+			level="Error"
+			category="Module">
+			<message>
+				The test run has been aborted by the user.
+			</message>
+			<metainfo
+				loglvl="Error">
+			</metainfo>
+		</item>
+	</activity>
+</report>

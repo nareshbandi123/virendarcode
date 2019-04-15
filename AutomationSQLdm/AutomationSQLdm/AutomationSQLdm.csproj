@@ -147,6 +147,12 @@
     <Compile Include="OperatorSecurityRole\TC_T721980\VerifyMaintenanceModeAfterSqlUserLogin.cs">
       <id>559214b6-a5f0-4a19-af2e-ece3752d9b63</id>
     </Compile>
+    <Compile Include="OperatorSecurityRole\TC_T721987\VerifysSheduleOptionNotAppearFromServerRightClickView.cs">
+      <id>5230bd29-252c-4238-a48e-4aaa4ab7ece8</id>
+    </Compile>
+    <Compile Include="OperatorSecurityRole\TC_T721988\AbleToSaveUserWithNewPermission.cs">
+      <id>386b2221-5a46-49ee-8269-65398d1420bb</id>
+    </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721993\VerifyMaintenanceModeForSqlUser.cs">
       <id>f1f6dc04-fc7c-446e-9726-34c5104b7858</id>
     </Compile>
@@ -266,6 +272,9 @@
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721994\VerifySnoozeAlertsForFewMinutesForWindowsUser.cs">
       <id>61bbbdcc-dc99-4a6c-b22a-bbc76fac1e50</id>
+    </Compile>
+    <Compile Include="OperatorSecurityRole\TC_T721989\VerifyMaintenanceModeForAllServersForWindowsUser.cs">
+      <id>8a5f1161-8d0a-4b70-845d-00c08a6fc1de</id>
     </Compile>
     <Compile Include="Program.cs">
       <id>5814e780-ff95-4e51-a14a-9bc079e4f89d</id>
@@ -414,6 +423,15 @@
     </Folder>
     <Folder Include="BVT\TC_T722131">
       <id>8ec1689f-7e37-4577-aed3-6b7242efee1f</id>
+    </Folder>
+    <Folder Include="OperatorSecurityRole\TC_T721988">
+      <id>320848e1-96d7-4415-ba5b-6773e32660a5</id>
+    </Folder>
+    <Folder Include="OperatorSecurityRole\TC_T721989">
+      <id>4069c1f9-78df-4620-b0a2-d530ce8cdc74</id>
+    </Folder>
+    <Folder Include="OperatorSecurityRole\TC_T721987">
+      <id>4990719a-56fa-4cb4-bb8b-36af0485d870</id>
     </Folder>
     <Folder Include="OperatorSecurityRole\TC_T721980">
       <id>88aee050-00fc-4c7b-8fd1-0954b89b0bd2</id>

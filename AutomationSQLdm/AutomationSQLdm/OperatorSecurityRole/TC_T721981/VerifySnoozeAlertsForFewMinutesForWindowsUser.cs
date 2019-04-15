@@ -52,8 +52,6 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721981
         	  Steps.ClickNextButton();
         	  Steps.ClickFinishButton();
         	  Steps.VerifyWindowsUserAdded();
-        	  //Steps.ClickWindowsUserToDelete();
-        	  //Steps.DeleteAddedUser();
 			  AutomationSQLdm.Grooming_Modifications.Steps.ClickOnTools();
         	  Steps.SelectSnoozeAlertMenuItem();
         	  Steps.SetSnoozeAlertTime();
@@ -63,6 +61,12 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721981
         	catch (Exception ex)
         	{
         		Validate.Fail(ex.Message);
+        	}
+        	finally
+        	{
+        		Steps.ClickAdministration();
+        		Steps.ClickWindowsUserToDelete();
+        	    Steps.DeleteAddedUser();
         	}
         	return true;
         }

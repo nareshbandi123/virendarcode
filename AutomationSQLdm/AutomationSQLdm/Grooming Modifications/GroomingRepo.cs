@@ -172,6 +172,10 @@ namespace AutomationSQLdm.Grooming_Modifications
             RepoItemInfo _aggregatequerydataintoInfo;
             RepoItemInfo _groominactivealertInfo;
             RepoItemInfo _groomprescriptiveanalysisInfo;
+            RepoItemInfo _groomingoncedailyatInfo;
+            RepoItemInfo _aggregaiononcedailyatInfo;
+            RepoItemInfo _groomsessionsqueriesInfo;
+            RepoItemInfo _groomchangelogInfo;
 
             /// <summary>
             /// Creates a new GroomingOptionWindow  folder.
@@ -189,6 +193,10 @@ namespace AutomationSQLdm.Grooming_Modifications
                 _aggregatequerydataintoInfo = new RepoItemInfo(this, "AggregateQueryDataInto", ".//container[@controlname='tableLayoutPanel4']/container[@controlname='aggregationThresholdNumericUpDown']/text[@controlname='upDownEdit']", 30000, null, "de5fbc57-3a2c-4f81-9e5c-abc2a430930a");
                 _groominactivealertInfo = new RepoItemInfo(this, "GroomInactiveAlert", ".//container[@controlname='tableLayoutPanel4']/container[@controlname='alertsGroomingThresholdNumericUpDown']/text[@controlname='upDownEdit']", 30000, null, "3fb2ebda-cce5-4ac4-b199-394653d2665c");
                 _groomprescriptiveanalysisInfo = new RepoItemInfo(this, "GroomPrescriptiveAnalysis", ".//container[@controlname='tableLayoutPanel4']/container[@controltypename='NumericUpDown' and @instance='5']/text[@controlname='upDownEdit']", 30000, null, "75d1eb55-600b-44fc-ac08-9fc009910a61");
+                _groomingoncedailyatInfo = new RepoItemInfo(this, "GroomingOnceDailyAt", ".//container[@controlname='containerPanel']//container[@controlname='groupBox1']//combobox//text[@accessiblename='Text area']", 30000, null, "1c880ec9-e930-4ccc-ace1-fd289843f3a2");
+                _aggregaiononcedailyatInfo = new RepoItemInfo(this, "AggregaionOnceDailyAt", ".//container[@controlname='containerPanel']//container[@controlname='groupBox2']//combobox//text[@accessiblename='Text area']", 30000, null, "0b029e11-c7a7-423e-a20e-586adb6c05cf");
+                _groomsessionsqueriesInfo = new RepoItemInfo(this, "GroomSessionsQueries", ".//container[@controlname='tableLayoutPanel4']/container[@controlname='activityGroomingThresholdNumericUpDown']/text[@controlname='upDownEdit']", 30000, null, "8d4e12ef-38a7-4191-8a37-9ebf6461b612");
+                _groomchangelogInfo = new RepoItemInfo(this, "GroomChangeLog", ".//container[@controlname='tableLayoutPanel4']/container[@controltypename='NumericUpDown' and @instance='4']/text[@controlname='upDownEdit']", 30000, null, "ee387910-4f33-4868-8ab2-40e6f12661af");
             }
 
             /// <summary>
@@ -452,6 +460,102 @@ namespace AutomationSQLdm.Grooming_Modifications
                 get
                 {
                     return _groomprescriptiveanalysisInfo;
+                }
+            }
+
+            /// <summary>
+            /// The GroomingOnceDailyAt item.
+            /// </summary>
+            [RepositoryItem("1c880ec9-e930-4ccc-ace1-fd289843f3a2")]
+            public virtual Ranorex.Text GroomingOnceDailyAt
+            {
+                get
+                {
+                    return _groomingoncedailyatInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The GroomingOnceDailyAt item info.
+            /// </summary>
+            [RepositoryItemInfo("1c880ec9-e930-4ccc-ace1-fd289843f3a2")]
+            public virtual RepoItemInfo GroomingOnceDailyAtInfo
+            {
+                get
+                {
+                    return _groomingoncedailyatInfo;
+                }
+            }
+
+            /// <summary>
+            /// The AggregaionOnceDailyAt item.
+            /// </summary>
+            [RepositoryItem("0b029e11-c7a7-423e-a20e-586adb6c05cf")]
+            public virtual Ranorex.Text AggregaionOnceDailyAt
+            {
+                get
+                {
+                    return _aggregaiononcedailyatInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The AggregaionOnceDailyAt item info.
+            /// </summary>
+            [RepositoryItemInfo("0b029e11-c7a7-423e-a20e-586adb6c05cf")]
+            public virtual RepoItemInfo AggregaionOnceDailyAtInfo
+            {
+                get
+                {
+                    return _aggregaiononcedailyatInfo;
+                }
+            }
+
+            /// <summary>
+            /// The GroomSessionsQueries item.
+            /// </summary>
+            [RepositoryItem("8d4e12ef-38a7-4191-8a37-9ebf6461b612")]
+            public virtual Ranorex.Text GroomSessionsQueries
+            {
+                get
+                {
+                    return _groomsessionsqueriesInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The GroomSessionsQueries item info.
+            /// </summary>
+            [RepositoryItemInfo("8d4e12ef-38a7-4191-8a37-9ebf6461b612")]
+            public virtual RepoItemInfo GroomSessionsQueriesInfo
+            {
+                get
+                {
+                    return _groomsessionsqueriesInfo;
+                }
+            }
+
+            /// <summary>
+            /// The GroomChangeLog item.
+            /// </summary>
+            [RepositoryItem("ee387910-4f33-4868-8ab2-40e6f12661af")]
+            public virtual Ranorex.Text GroomChangeLog
+            {
+                get
+                {
+                    return _groomchangelogInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The GroomChangeLog item info.
+            /// </summary>
+            [RepositoryItemInfo("ee387910-4f33-4868-8ab2-40e6f12661af")]
+            public virtual RepoItemInfo GroomChangeLogInfo
+            {
+                get
+                {
+                    return _groomchangelogInfo;
                 }
             }
         }

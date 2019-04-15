@@ -53,6 +53,7 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721975
         	  Steps.ClickNextButton();
         	  Steps.ClickFinishButton();
         	  Steps.VerifySqlUserAdded();
+        	  //Steps.VerifyUserAdded(Constants.NewSqlUser);
         	  Steps.ClickSqlUserToDelete();
         	  Steps.DeleteAddedUser();
         	} 

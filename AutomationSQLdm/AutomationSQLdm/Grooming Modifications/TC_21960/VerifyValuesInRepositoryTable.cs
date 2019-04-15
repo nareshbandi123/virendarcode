@@ -42,8 +42,8 @@ namespace AutomationSQLdm.Grooming_Modifications.TC_21960
         		
         		Steps.ClickOnTools();
         		Steps.SelectGroomingOption();
-        		Steps.VerifyValuesInRepositoryTable();
-        		Steps.ClickOnCancel();
+        		Steps.VerifyFieldsAreEditable();
+//        		Steps.ClickOnCancel();
 
         	} 
         	catch (Exception ex)
