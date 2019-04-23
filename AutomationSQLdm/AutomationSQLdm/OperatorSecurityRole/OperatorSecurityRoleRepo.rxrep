@@ -13,15 +13,6 @@ rxversion="8.2">
 	name="Root"
 	searchtimeout="0ms"
 	usecache="True">
-		<item
-		addcaps="cell,accessible"
-		capname="cell"
-		id="172570af-8ff7-4fe3-85cb-8980091f5933"
-		name="NewSqlUserAdded"
-		refimgid="d0209644-d165-4c3b-b528-f7db475fdd15"
-		searchtimeout="30000ms">
-			/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//table[@accessiblename~'^\ \ \ \ \ \ \ System\ logins,\ whi']//cell[@accessiblevalue='sa1']
-		</item>
 		<appfolder
 		capname="form"
 		id="1a73f651-c755-42fc-8b6e-622d9bbcf5f6"
@@ -156,6 +147,34 @@ rxversion="8.2">
 			searchtimeout="30000ms">
 				/form[@title~'^Idera\ SQL\ diagnostic\ mana']//container[@accessiblename='Home']/toolbar[@accessiblename='Permissions']/button[@accessiblename='Edit']
 			</item>
+			<item
+			addcaps="link,accessible"
+			capname="link"
+			id="3447d0d2-3674-4ea1-be99-d592db18d4dd"
+			name="NoServerInMaintenanceMode"
+			refimgid="8e3de47d-6006-44ec-aa4b-af82758bc708"
+			refpath="/form[@title='Idera SQL diagnostic manager - SQLdmRepository (CIGNITI-W12R2-1\SQL2016)']/statusbar[@automationid='statusBar']/container[2]/container[@automationid='viewContainer']/container[@automationid='windowsFormsHostControl']/container[@caption='']/container[@controlname='_child']/container[@controlname='NewSQLdmTodayView']/element[@controlname='contentPanel']/container[@controlname='contentPanel.ClientArea']/container[@controlname='tableLayoutPanel1']/container[@controlname='panel1']/container[@controlname='statusSummaryContentPanel']/link[@controlname='maintenanceModeServersLabel']/text[@accessiblename='0 server(s) in Maintenance Mode']/link[@accessiblename='0 server(s) in Maintenance Mode']"
+			searchtimeout="30000ms">
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='NewSQLdmTodayView']//container[@controlname='panel1']/?/?/link[@controlname='maintenanceModeServersLabel']/?/?/link[@accessiblename~'^0\ server\(s\)\ in\ Maintenanc']
+			</item>
+			<item
+			addcaps="cell,accessible"
+			capname="cell"
+			id="172570af-8ff7-4fe3-85cb-8980091f5933"
+			name="NewSqlUserAdded"
+			refimgid="d0209644-d165-4c3b-b528-f7db475fdd15"
+			searchtimeout="30000ms">
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//table[@accessiblename~'^\ \ \ \ \ \ \ System\ logins,\ whi']//cell[@accessiblevalue='sa1']
+			</item>
+			<item
+			addcaps="text,control,nativewindow"
+			capname="text"
+			id="0a718083-c629-489b-b026-8f64d6644495"
+			name="Tags"
+			refimgid="0aa4c515-c07d-4e7c-9902-375b49438e19"
+			searchtimeout="30000ms">
+				/form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']//container[@automationid='navigationPaneHost']//container[@controlname='NavigationPaneControl']//container[@controlname='tagsPanel']/text[@controlname='manageTagsLabel']
+			</item>
 			<basepath>
 				/form[@title~'^Idera\ SQL\ diagnostic\ mana']
 			</basepath>
@@ -221,7 +240,7 @@ rxversion="8.2">
 			id="7a396840-f02f-4960-aaab-3ff9800f57cb"
 			name="AvailableServers"
 			searchtimeout="30000ms">
-				/form[@controlname='AddPermissionWizard']/container[@controlname='_wizard']//container[@controlname='_serversListSelectorControl']//list[@controlname='listBoxAvailable']
+				/form[@controlname='AddPermissionWizard']/container[@controlname='_wizard']//list[@controlname='listBoxAvailable']/list[@accessiblename='Selected Servers:']
 			</item>
 			<item
 			addcaps="button,control,nativewindow"
@@ -414,7 +433,7 @@ XrLp0EM2aG+RntUiB+ZT6fxfIsRPbYnQgbXhGFYAAAAASUVORK5CYII=
 			addcaps="menuitem,wpfelement,wpfgroupelement"
 			capname="menuitem"
 			id="d2c4305a-4698-46ad-84e5-a40c309c3fe6"
-			name="MaintenanceModeEnableMenuItem"
+			name="EnableMenuItem"
 			refimgid="60433074-1a68-40c9-9969-217c2a825c2d"
 			refpath="/contextmenu[@processname='SQLdmDesktopClient' and @win32ownerwindowlevel='2']/menuitem[@automationid='maintenanceModeEnableButtonKey']"
 			searchtimeout="30000ms">
@@ -424,7 +443,7 @@ XrLp0EM2aG+RntUiB+ZT6fxfIsRPbYnQgbXhGFYAAAAASUVORK5CYII=
 			addcaps="menuitem,wpfelement,wpfgroupelement"
 			capname="menuitem"
 			id="2f03dfc7-d8ce-4dd4-aab7-030571ed947d"
-			name="MaintenanceModeDisableMenuItem"
+			name="DisableMenuItem"
 			refimgid="c91012f7-a9d4-4455-92b9-b91bc09fe200"
 			refpath="/contextmenu[@processname='SQLdmDesktopClient' and @win32ownerwindowlevel='2']/menuitem[@automationid='maintenanceModeDisablettonKey']"
 			searchtimeout="30000ms">
@@ -434,7 +453,7 @@ XrLp0EM2aG+RntUiB+ZT6fxfIsRPbYnQgbXhGFYAAAAASUVORK5CYII=
 			addcaps="menuitem,wpfelement,wpfgroupelement"
 			capname="menuitem"
 			id="10182fd7-0261-4e59-9fd9-1dc53a646b16"
-			name="MaintenanceModeScheduleMenuItem"
+			name="ScheduleMenuItem"
 			refimgid="095d90d1-4b44-42d4-a7bf-ed6bdf359c28"
 			refpath="/contextmenu[@processname='SQLdmDesktopClient' and @win32ownerwindowlevel='2']/menuitem[@automationid='maintenanceModeScheduleButtonKey']"
 			searchtimeout="30000ms">
@@ -732,6 +751,117 @@ l0yXQ6LNnACkLwckb1yDqDh3YKn6dEq9zy3R45TosMX40PsbQOyiLqiHhLo/eesqIwl1z6L6V3uM
 T9Yo73q8rE8A7i0xEOVI4p+HYggATMyByxdnyKPRP6rxbVilw67wcVBOAtambRFvof4hufvzyTGa
 yBbJEskUycg1sS/HxN7sPPaI7M7KY1dmKjszUsnJL2LhTf7rGAy/AP7X5rYY5FLEAAAAAElFTkSu
 QmCC
+			</icon>
+		</appfolder>
+		<appfolder
+		addcaps="form,control,nativewindow"
+		capname="form"
+		id="63698209-1c78-4c59-a1fc-cb8bb722444a"
+		isrooted="True"
+		name="ManageTagsDialog"
+		refpath="/form[@controlname='ManageTagsDialog']"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			addcaps="button,control,nativewindow"
+			capname="button"
+			id="d09abec1-27d4-44c4-9dd1-33326a88a05d"
+			name="AddButton"
+			refimgid="873e8a1a-70f8-439e-8a07-984463bf21cf"
+			refpath="/form[@controlname='ManageTagsDialog']/container[@controlname='office2007PropertyPage1']/container[@controlname='backgroundPanel']/container[@controlname='ContentPanel']/container[@controlname='manageTagsMainContainer']/container[@controlname='manageTagsButtonsContainer']/button[@controlname='addButton']"
+			searchtimeout="30000ms">
+				/form[@controlname='ManageTagsDialog']/container[@controlname='office2007PropertyPage1']//container[@controlname='manageTagsButtonsContainer']/button[@controlname='addButton']
+			</item>
+			<item
+			addcaps="table,control,nativewindow"
+			capname="table"
+			id="b6a6dc49-8b7f-43da-9250-0f53fec8e79e"
+			name="TagsListView"
+			refimgid="e044751b-bab0-4f2c-941b-28ed9f7ee272"
+			searchtimeout="30000ms">
+				/form[@controlname='ManageTagsDialog']/container[@controlname='office2007PropertyPage1']//container[@controlname='ContentPanel']//table[@controlname='tagsListView']
+			</item>
+			<item
+			addcaps="button,control,nativewindow"
+			capname="button"
+			id="fad4530d-57f7-40b0-9aba-0e480f31b0fa"
+			name="DoneButton"
+			refimgid="588b1b17-b55e-4ae4-919b-5c73ded7f7c7"
+			refpath="/form[@controlname='ManageTagsDialog']/button[@controlname='doneButton']"
+			searchtimeout="30000ms">
+				/form[@controlname='ManageTagsDialog']/button[@controlname='doneButton']
+			</item>
+			<basepath>
+				/form[@controlname='ManageTagsDialog']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAH4SURBVDhPrdFdSJNhGMbxR1BzhTJzapnsJGgU
+RnQQEXYQhGkEgRIUihSzrKyEMM0ME00ENRY6WjPLmOasObKkHDTKmoSBERUZbNWsVdtys/nRKjr5
+9+F74AvBwLrggufk/l0Hj/gveTDoYD6VzmcB6SnLsDGZbxOdfPW2EnbXMDNawvTjPCaHNnKlOj4y
+MGRQEfY08cVVzsyzQqYeZTN5by2fB9R0VC6KDNxvTZqzmknIrmGiP4VxaxzGsoVyYGxNNM7VMTzP
+iGVkVRyOlQrsusVMDWcT+r1qUxPoS+DTtWh83QJ9qUIOTN/sJWQ2ETDq8Taexro8noEmJaE7GoL9
+yQR6Ffh7ovjYJfBcFuhK4uRA8KIBf3MDnqpy3hwoQq9O5EaDkuCv1XFLDD6z4INJ8K5D4G4XNO5f
+IAfenzqB+3AxzvwdvMjZTPWSFCy1CfivRuGVVscuCV63CZxGQX1RrBxwFe5idFsWTzPXMZKh4aAq
+7a9/P7fS+SxQkZrKEdVSipPS2J24jAJlOlV9b+l08Kftd+GsDequw7Fu2HrcJgekpyxlZhdGO5y5
+DTVWONoF+9qgoOUH67U9kYG9hiectECpCbTnIV/3ndz6ADmVr1iReyEykFc3yJ5zsLM5zPZaH1sq
+XrLp0EM2aG+RntUiB+ZT6fxfIsRPbYnQgbXhGFYAAAAASUVORK5CYII=
+			</icon>
+		</appfolder>
+		<appfolder
+		addcaps="form,control,nativewindow"
+		capname="form"
+		id="e66b4bc3-703b-46a5-811a-d7d49164a756"
+		isrooted="True"
+		name="TagPropertiesDialog"
+		refpath="/form[@controlname='TagPropertiesDialog']"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			addcaps="text,accessible"
+			capname="text"
+			id="9884fdba-5b65-4304-ae27-24011788cb2e"
+			name="TagName"
+			refimgid="e58e1c57-efa6-4b95-b1db-7c9389429cf9"
+			refpath="/form[@controlname='TagPropertiesDialog']/text[@controlname='tagNameTextBox']/text[@accessiblerole='Text']"
+			searchtimeout="30000ms">
+				/form[@controlname='TagPropertiesDialog']/?/?/text[@accessiblerole='Text']
+			</item>
+			<item
+			addcaps="checkbox,control,nativewindow"
+			capname="checkbox"
+			id="ec2ab8a2-be10-448c-a31a-8c84f6a3cd08"
+			name="SelectAllServersCheckBox"
+			refimgid="aefd89cb-d475-4809-89fc-f168de95b59e"
+			refpath="/form[@controlname='TagPropertiesDialog']/tabpagelist[@controlname='tabControl1']/tabpage[@controlname='tabPage1']/checkbox[@controlname='selectAllServersCheckBox']"
+			searchtimeout="30000ms">
+				/form[@controlname='TagPropertiesDialog']/?/?/tabpage[@controlname='tabPage1']/checkbox[@controlname='selectAllServersCheckBox']
+			</item>
+			<item
+			addcaps="button,control,nativewindow"
+			capname="button"
+			id="3f98e077-0812-464a-9654-63a0e9a96d86"
+			name="OkButton"
+			refimgid="0fa59c58-f3b4-4f8d-a764-967325a2d039"
+			refpath="/form[@controlname='TagPropertiesDialog']/button[@controlname='okButton']"
+			searchtimeout="30000ms">
+				/form[@controlname='TagPropertiesDialog']/button[@controlname='okButton']
+			</item>
+			<basepath>
+				/form[@controlname='TagPropertiesDialog']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAH4SURBVDhPrdFdSJNhGMbxR1BzhTJzapnsJGgU
+RnQQEXYQhGkEgRIUihSzrKyEMM0ME00ENRY6WjPLmOasObKkHDTKmoSBERUZbNWsVdtys/nRKjr5
+9+F74AvBwLrggufk/l0Hj/gveTDoYD6VzmcB6SnLsDGZbxOdfPW2EnbXMDNawvTjPCaHNnKlOj4y
+MGRQEfY08cVVzsyzQqYeZTN5by2fB9R0VC6KDNxvTZqzmknIrmGiP4VxaxzGsoVyYGxNNM7VMTzP
+iGVkVRyOlQrsusVMDWcT+r1qUxPoS+DTtWh83QJ9qUIOTN/sJWQ2ETDq8Taexro8noEmJaE7GoL9
+yQR6Ffh7ovjYJfBcFuhK4uRA8KIBf3MDnqpy3hwoQq9O5EaDkuCv1XFLDD6z4INJ8K5D4G4XNO5f
+IAfenzqB+3AxzvwdvMjZTPWSFCy1CfivRuGVVscuCV63CZxGQX1RrBxwFe5idFsWTzPXMZKh4aAq
+7a9/P7fS+SxQkZrKEdVSipPS2J24jAJlOlV9b+l08Kftd+GsDequw7Fu2HrcJgekpyxlZhdGO5y5
+DTVWONoF+9qgoOUH67U9kYG9hiectECpCbTnIV/3ndz6ADmVr1iReyEykFc3yJ5zsLM5zPZaH1sq
+XrLp0EM2aG+RntUiB+ZT6fxfIsRPbYnQgbXhGFYAAAAASUVORK5CYII=
 			</icon>
 		</appfolder>
 		<basepath>

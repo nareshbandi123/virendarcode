@@ -96,7 +96,9 @@ namespace AutomationSQLdm
         [RepositoryFolder("9e58868c-5494-43f0-bef4-1afb3d150112")]
         public partial class AddPermissionWizardAppFolder : RepoGenBaseFolder
         {
+            AutomationSQLdmRepositoryFolders.ContainerWizard1Folder _containerwizard1;
             RepoItemInfo _jsxw7s8sql2008Info;
+            RepoItemInfo _containerwizardInfo;
 
             /// <summary>
             /// Creates a new AddPermissionWizard  folder.
@@ -104,7 +106,9 @@ namespace AutomationSQLdm
             public AddPermissionWizardAppFolder(RepoGenBaseFolder parentFolder) :
                     base("AddPermissionWizard", "/form[@controlname='AddPermissionWizard']", parentFolder, 30000, null, true, "9e58868c-5494-43f0-bef4-1afb3d150112", "")
             {
+                _containerwizard1 = new AutomationSQLdmRepositoryFolders.ContainerWizard1Folder(this);
                 _jsxw7s8sql2008Info = new RepoItemInfo(this, "JSXW7S8SQL2008", "container[@controlname='_wizard']//list[@controlname='listBoxAvailable']/list[@accessiblename='Selected Servers:']/listitem[@accessiblename='JS-XW7S8\\SQL2008']", 30000, null, "44e4224c-d691-4676-9767-ca1d9a6f2319");
+                _containerwizardInfo = new RepoItemInfo(this, "ContainerWizard", "container[@controlname='_wizard']", 30000, null, "9568aa91-aa10-4a4e-941a-f03efd845d9e");
             }
 
             /// <summary>
@@ -152,6 +156,183 @@ namespace AutomationSQLdm
                 get
                 {
                     return _jsxw7s8sql2008Info;
+                }
+            }
+
+            /// <summary>
+            /// The ContainerWizard item.
+            /// </summary>
+            [RepositoryItem("9568aa91-aa10-4a4e-941a-f03efd845d9e")]
+            public virtual Ranorex.Container ContainerWizard
+            {
+                get
+                {
+                    return _containerwizardInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ContainerWizard item info.
+            /// </summary>
+            [RepositoryItemInfo("9568aa91-aa10-4a4e-941a-f03efd845d9e")]
+            public virtual RepoItemInfo ContainerWizardInfo
+            {
+                get
+                {
+                    return _containerwizardInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ContainerWizard1 folder.
+            /// </summary>
+            [RepositoryFolder("d3c108a0-ec83-4d5e-8964-39394faa4dde")]
+            public virtual AutomationSQLdmRepositoryFolders.ContainerWizard1Folder ContainerWizard1
+            {
+                get { return _containerwizard1; }
+            }
+        }
+
+        /// <summary>
+        /// The ContainerWizard1Folder folder.
+        /// </summary>
+        [RepositoryFolder("d3c108a0-ec83-4d5e-8964-39394faa4dde")]
+        public partial class ContainerWizard1Folder : RepoGenBaseFolder
+        {
+            RepoItemInfo _buttonaddInfo;
+            RepoItemInfo _authooversql2012Info;
+            RepoItemInfo _win2k162Info;
+            RepoItemInfo _win10x6401Info;
+
+            /// <summary>
+            /// Creates a new ContainerWizard1  folder.
+            /// </summary>
+            public ContainerWizard1Folder(RepoGenBaseFolder parentFolder) :
+                    base("ContainerWizard1", "container[@controlname='_wizard']", parentFolder, 30000, null, false, "d3c108a0-ec83-4d5e-8964-39394faa4dde", "")
+            {
+                _buttonaddInfo = new RepoItemInfo(this, "ButtonAdd", ".//container[@controlname='tableLayoutPanel2']/button[@controlname='buttonAdd']", 30000, null, "57e3ebff-ff0a-445a-a779-149ce4cdf938");
+                _authooversql2012Info = new RepoItemInfo(this, "AUTHOOVERSQL2012", ".//list[@controlname='listBoxAvailable']/list[@accessiblename='Selected Servers:']/listitem[@accessiblename='AUT-HOOVER\\SQL2012']", 30000, null, "f2d14ea1-a097-40b7-bdf0-48b640bcd408");
+                _win2k162Info = new RepoItemInfo(this, "WIN2K162", ".//list[@controlname='listBoxAvailable']/list[@accessiblename='Selected Servers:']/listitem[@accessiblename='WIN2K16-2']", 30000, null, "90098d95-4d36-4376-890f-5bd893c93be6");
+                _win10x6401Info = new RepoItemInfo(this, "WIN10X6401", ".//list[@controlname='listBoxAvailable']/list[@accessiblename='Selected Servers:']/listitem[@accessiblename='WIN10X64-01']", 30000, null, "be0dc4ec-821a-4854-a277-e11110dc7611");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("d3c108a0-ec83-4d5e-8964-39394faa4dde")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("d3c108a0-ec83-4d5e-8964-39394faa4dde")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ButtonAdd item.
+            /// </summary>
+            [RepositoryItem("57e3ebff-ff0a-445a-a779-149ce4cdf938")]
+            public virtual Ranorex.Button ButtonAdd
+            {
+                get
+                {
+                    return _buttonaddInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ButtonAdd item info.
+            /// </summary>
+            [RepositoryItemInfo("57e3ebff-ff0a-445a-a779-149ce4cdf938")]
+            public virtual RepoItemInfo ButtonAddInfo
+            {
+                get
+                {
+                    return _buttonaddInfo;
+                }
+            }
+
+            /// <summary>
+            /// The AUTHOOVERSQL2012 item.
+            /// </summary>
+            [RepositoryItem("f2d14ea1-a097-40b7-bdf0-48b640bcd408")]
+            public virtual Ranorex.ListItem AUTHOOVERSQL2012
+            {
+                get
+                {
+                    return _authooversql2012Info.CreateAdapter<Ranorex.ListItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The AUTHOOVERSQL2012 item info.
+            /// </summary>
+            [RepositoryItemInfo("f2d14ea1-a097-40b7-bdf0-48b640bcd408")]
+            public virtual RepoItemInfo AUTHOOVERSQL2012Info
+            {
+                get
+                {
+                    return _authooversql2012Info;
+                }
+            }
+
+            /// <summary>
+            /// The WIN2K162 item.
+            /// </summary>
+            [RepositoryItem("90098d95-4d36-4376-890f-5bd893c93be6")]
+            public virtual Ranorex.ListItem WIN2K162
+            {
+                get
+                {
+                    return _win2k162Info.CreateAdapter<Ranorex.ListItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The WIN2K162 item info.
+            /// </summary>
+            [RepositoryItemInfo("90098d95-4d36-4376-890f-5bd893c93be6")]
+            public virtual RepoItemInfo WIN2K162Info
+            {
+                get
+                {
+                    return _win2k162Info;
+                }
+            }
+
+            /// <summary>
+            /// The WIN10X6401 item.
+            /// </summary>
+            [RepositoryItem("be0dc4ec-821a-4854-a277-e11110dc7611")]
+            public virtual Ranorex.ListItem WIN10X6401
+            {
+                get
+                {
+                    return _win10x6401Info.CreateAdapter<Ranorex.ListItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The WIN10X6401 item info.
+            /// </summary>
+            [RepositoryItemInfo("be0dc4ec-821a-4854-a277-e11110dc7611")]
+            public virtual RepoItemInfo WIN10X6401Info
+            {
+                get
+                {
+                    return _win10x6401Info;
                 }
             }
         }

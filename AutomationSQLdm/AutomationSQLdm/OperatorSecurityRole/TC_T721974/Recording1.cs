@@ -79,6 +79,29 @@ namespace AutomationSQLdm.OperatorSecurityRole.TC_T721974
 
             Init();
 
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'AddPermissionWizard.ContainerWizard1.AUTHOOVERSQL2012' at 113;6.", repo.AddPermissionWizard.ContainerWizard1.AUTHOOVERSQL2012Info, new RecordItemIndex(0));
+            repo.AddPermissionWizard.ContainerWizard1.AUTHOOVERSQL2012.Click("113;6");
+            Delay.Milliseconds(200);
+            
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{LControlKey down}{LShiftKey down}' with focus on 'AddPermissionWizard.ContainerWizard1.AUTHOOVERSQL2012'.", repo.AddPermissionWizard.ContainerWizard1.AUTHOOVERSQL2012Info, new RecordItemIndex(1));
+            repo.AddPermissionWizard.ContainerWizard1.AUTHOOVERSQL2012.PressKeys("{LControlKey down}{LShiftKey down}");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'AddPermissionWizard.ContainerWizard1.WIN10X6401' at 60;10.", repo.AddPermissionWizard.ContainerWizard1.WIN10X6401Info, new RecordItemIndex(2));
+            repo.AddPermissionWizard.ContainerWizard1.WIN10X6401.Click("60;10");
+            Delay.Milliseconds(200);
+            
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{LControlKey up}{LShiftKey up}' with focus on 'AddPermissionWizard.ContainerWizard1.WIN10X6401'.", repo.AddPermissionWizard.ContainerWizard1.WIN10X6401Info, new RecordItemIndex(3));
+            repo.AddPermissionWizard.ContainerWizard1.WIN10X6401.PressKeys("{LControlKey up}{LShiftKey up}");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'AddPermissionWizard.ContainerWizard1.ButtonAdd' at 42;12.", repo.AddPermissionWizard.ContainerWizard1.ButtonAddInfo, new RecordItemIndex(4));
+            repo.AddPermissionWizard.ContainerWizard1.ButtonAdd.Click("42;12");
+            Delay.Milliseconds(200);
+            
+            Report.Log(ReportLevel.Info, "Delay", "Waiting for 500ms.", new RecordItemIndex(5));
+            Delay.Duration(500, false);
+            
         }
 
 #region Image Feature Data

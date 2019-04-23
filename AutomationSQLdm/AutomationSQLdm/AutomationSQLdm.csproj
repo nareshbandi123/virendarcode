@@ -144,7 +144,7 @@
       <RepositoryCode>true</RepositoryCode>
       <id>5b210215-ec15-4cdb-851e-1c68970dbe47</id>
     </Compile>
-    <Compile Include="OperatorSecurityRole\TC_T721980\VerifyMaintenanceModeAfterSqlUserLogin.cs">
+    <Compile Include="OperatorSecurityRole\TC_T721980\VerifyMaintenanceModeAfterNewlyAddedSqlUserLogin.cs">
       <id>559214b6-a5f0-4a19-af2e-ece3752d9b63</id>
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721987\VerifysSheduleOptionNotAppearFromServerRightClickView.cs">
@@ -152,6 +152,9 @@
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721988\AbleToSaveUserWithNewPermission.cs">
       <id>386b2221-5a46-49ee-8269-65398d1420bb</id>
+    </Compile>
+    <Compile Include="OperatorSecurityRole\TC_T721990\VerifySnoozeAlertsAllServerSqlUser.cs">
+      <id>56b1cf54-e04f-468f-bea9-2c4e844e0fee</id>
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721993\VerifyMaintenanceModeForSqlUser.cs">
       <id>f1f6dc04-fc7c-446e-9726-34c5104b7858</id>
@@ -267,7 +270,7 @@
     <Compile Include="OperatorSecurityRole\TC_T721983\VerifyMaintenanceModeForWindowsUser.cs">
       <id>1d1988ec-a4cb-49ea-b267-fd5094a839ba</id>
     </Compile>
-    <Compile Include="OperatorSecurityRole\TC_T721992\VerifySnoozeAlertsForFewMinutesForSqlUser.cs">
+    <Compile Include="OperatorSecurityRole\TC_T721992\VerifySnoozeAlertsForServerTagFewMinutesForSqlUser.cs">
       <id>46576976-b679-4d9c-8546-a33cc357539b</id>
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721994\VerifySnoozeAlertsForFewMinutesForWindowsUser.cs">
@@ -423,6 +426,9 @@
     </Folder>
     <Folder Include="BVT\TC_T722131">
       <id>8ec1689f-7e37-4577-aed3-6b7242efee1f</id>
+    </Folder>
+    <Folder Include="OperatorSecurityRole\TC_T721990">
+      <id>c17d35b4-750c-43f2-94ff-a04c685932c3</id>
     </Folder>
     <Folder Include="OperatorSecurityRole\TC_T721988">
       <id>320848e1-96d7-4415-ba5b-6773e32660a5</id>

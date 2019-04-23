@@ -13,6 +13,9 @@ namespace AutomationSQLdm.Commons
 		public const string WindowsUser = "WindowsUser";
 		public const string SqlUser = "SqlUser";
 		public const string strAdministrator = "Administrator";
+		public const string strEnable = "Enable";
+		public const string strDisable = "Disable";
+		public const string strTagSnoozeAlert = "TagSnoozeAlert";
 		//{"GroomForecasting", "AggregateForecasting", "GroomPrescriptiveAnalysis","GroomQueryAggregation","GroomAlerts","GroomMetrics"};
 
 #region SQLDM Constants
@@ -20,6 +23,7 @@ namespace AutomationSQLdm.Commons
 		
 		public const string NewWindowsUser = @"SIMPSONS\administrator1";
 		public const string NewSqlUser = @"sa1";
+		//public const string NewSqlUser1 = @"sa2";
 		public const string NewSqlUserPassword = @"Admin@123";
 		
 		public const string SqlSystemUser = @"sa";

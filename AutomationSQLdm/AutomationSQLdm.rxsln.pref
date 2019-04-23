@@ -22,13 +22,15 @@
       <string>0d7aa009-3feb-4533-8422-856f53f78d53</string>
       <string>f05e805c-24a0-4de8-af7a-dab9e1ee3c1f</string>
       <string>ea7e4640-c578-4f81-9692-844f07689ab5</string>
+      <string>4990719a-56fa-4cb4-bb8b-36af0485d870</string>
       <string>320848e1-96d7-4415-ba5b-6773e32660a5</string>
       <string>4069c1f9-78df-4620-b0a2-d530ce8cdc74</string>
+      <string>c17d35b4-750c-43f2-94ff-a04c685932c3</string>
       <string>0a7fbdd1-10d3-4c37-befe-a465984b081f</string>
       <string>8769d1d1-bece-4770-9ee6-4735bb590887</string>
       <string>8e713023-d15b-4f8b-a377-d1320ff1ab26</string>
     </ArrayOfString>
   </SerializedValue>
-  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[Application[]BVT[TC_T722131[]]OperatorSecurityRole[TC_T721974[]TC_T721975[]TC_T721976[]TC_T721977[]TC_T721980[]TC_T721981[]TC_T721982[]TC_T721983[]TC_T721987[]TC_T721988[]TC_T721992[]TC_T721993[]TC_T721994[]]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\AutomationSQLdm.rxtst&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\OperatorSecurityRole\TC_T721980\VerifyMaintenanceModeAfterSqlUserLogin.cs" />
+  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[Application[]BVT[TC_T722131[]]Commons[]Extensions[]OperatorSecurityRole[TC_T721974[]TC_T721975[]TC_T721976[]TC_T721977[]TC_T721980[]TC_T721981[]TC_T721982[]TC_T721983[]TC_T721987[]TC_T721988[]TC_T721989[]TC_T721990[]TC_T721992[]TC_T721993[]TC_T721994[]]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\AutomationSQLdm.rxtst&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\OperatorSecurityRole\TC_T721982\VerifySnoozeAlertsFor10MinutesForWindowsUser.cs" />
   <StartupProject value="{61F99090-53F7-41D0-9F8A-6FC8C2262E52}" />
 </Properties>

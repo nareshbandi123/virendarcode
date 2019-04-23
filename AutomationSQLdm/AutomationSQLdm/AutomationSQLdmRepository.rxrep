@@ -32,6 +32,69 @@ rxversion="8.2">
 			searchtimeout="30000ms">
 				/form[@controlname='AddPermissionWizard']/container[@controlname='_wizard']//list[@controlname='listBoxAvailable']/list[@accessiblename='Selected Servers:']/listitem[@accessiblename='JS-XW7S8\SQL2008']
 			</item>
+			<item
+			addcaps="container,control,nativewindow"
+			capname="container"
+			id="9568aa91-aa10-4a4e-941a-f03efd845d9e"
+			name="ContainerWizard"
+			refimgid="9b6a8d3e-321c-4629-87ca-413391ba94f7"
+			refpath="/form[@controlname='AddPermissionWizard']/container[@controlname='_wizard']"
+			searchtimeout="30000ms">
+				/form[@controlname='AddPermissionWizard']/container[@controlname='_wizard']
+			</item>
+			<folder
+			addcaps="container,control,nativewindow"
+			capname="container"
+			id="d3c108a0-ec83-4d5e-8964-39394faa4dde"
+			isrooted="True"
+			name="ContainerWizard1"
+			refpath="/form[@controlname='AddPermissionWizard']/container[@controlname='_wizard']"
+			searchtimeout="30000ms"
+			usecache="False">
+				<item
+				addcaps="button,control,nativewindow"
+				capname="button"
+				id="57e3ebff-ff0a-445a-a779-149ce4cdf938"
+				name="ButtonAdd"
+				refimgid="57fb7ebb-e0fa-4043-93f6-fb3057d603c1"
+				refpath="/form[@controlname='AddPermissionWizard']/container/element[@controlname='_serversPage']/container/container/container/button[@controlname='buttonAdd']"
+				searchtimeout="30000ms">
+					/form[@controlname='AddPermissionWizard']/container[@controlname='_wizard']//container[@controlname='tableLayoutPanel2']/button[@controlname='buttonAdd']
+				</item>
+				<item
+				addcaps="listitem,accessible"
+				capname="listitem"
+				id="f2d14ea1-a097-40b7-bdf0-48b640bcd408"
+				name="AUTHOOVERSQL2012"
+				refimgid="8fe95a23-00d5-4a9c-9b56-ae671de78a26"
+				refpath="/form[@controlname='AddPermissionWizard']/container/element[@controlname='_serversPage']/container/container/list[@controlname='listBoxAvailable']/list/listitem[@accessiblename='AUT-HOOVER\SQL2012']"
+				searchtimeout="30000ms">
+					/form[@controlname='AddPermissionWizard']/container[@controlname='_wizard']//list[@controlname='listBoxAvailable']/list[@accessiblename='Selected Servers:']/listitem[@accessiblename='AUT-HOOVER\SQL2012']
+				</item>
+				<item
+				addcaps="listitem,accessible"
+				capname="listitem"
+				id="90098d95-4d36-4376-890f-5bd893c93be6"
+				name="WIN2K162"
+				refimgid="091b503f-107c-48c9-b81a-9612d6b9ccca"
+				refpath="/form[@controlname='AddPermissionWizard']/container/element[@controlname='_serversPage']/container/container/list[@controlname='listBoxAvailable']/list/listitem[@accessiblename='WIN2K16-2']"
+				searchtimeout="30000ms">
+					/form[@controlname='AddPermissionWizard']/container[@controlname='_wizard']//list[@controlname='listBoxAvailable']/list[@accessiblename='Selected Servers:']/listitem[@accessiblename='WIN2K16-2']
+				</item>
+				<item
+				addcaps="listitem,accessible"
+				capname="listitem"
+				id="be0dc4ec-821a-4854-a277-e11110dc7611"
+				name="WIN10X6401"
+				refimgid="67bc060f-9691-46b9-aa43-4b900414c055"
+				refpath="/form[@controlname='AddPermissionWizard']/container/element[@controlname='_serversPage']/container/container/list[@controlname='listBoxAvailable']/list/listitem[@accessiblename='WIN10X64-01']"
+				searchtimeout="30000ms">
+					/form[@controlname='AddPermissionWizard']/container[@controlname='_wizard']//list[@controlname='listBoxAvailable']/list[@accessiblename='Selected Servers:']/listitem[@accessiblename='WIN10X64-01']
+				</item>
+				<basepath>
+					/form[@controlname='AddPermissionWizard']/container[@controlname='_wizard']
+				</basepath>
+			</folder>
 			<basepath>
 				/form[@controlname='AddPermissionWizard']
 			</basepath>
